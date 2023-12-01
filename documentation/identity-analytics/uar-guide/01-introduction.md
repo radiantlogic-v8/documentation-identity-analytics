@@ -3,18 +3,20 @@ title: "Identity Analytics Access Review Guide"
 description : "Identity Analytics Access Review Guide"
 ---
 
-# Identity Analytics Access Review Guide
+# Introduction
 
-This document describes the basic principles of self-service, Compliance driven Access, Review in IAS (Identity Analytics Services) as well as the best practices to follow to configure a review and manage the remediations.
+This document describes the basic principles of self-service compliance driven Access Review in IA (Identity Analytics) as well as the best practices to configure, follow-up a review and manage the remediations.
 
 This documentation will only focus on access review configuration, for a more general introduction to RadiantOne Identity Analytics and the configuration of the solution, please refer to the full documentation, available using the following URL:
-[https://developer.radiantlogic.com](https://developer.radiantlogic.com)
+[https://developer.radiantlogic.com](https://developer.radiantlogic.com)  
+
+> Note that with IAP version 2.1, the application access rights review comes with a new "sign off" principles and the ability to launch remediation just after a reviewer signed off and not only after the campaign is finalized. For this reason, before upgrading IAP to 2.1, it is necessary to finalize all web-based reviews.  
 
 ## General principles
 
 ### Access Review
 
-Access review is often key when working within compliance restrictions (Sarbanes Oxley 404 for financial systems, CRBF 97-.02 in the world of banking, Solvency II in the insurance world, and ISAE 3402 for hosting companies, to name but a few). For this reason it is included in most security policies, including those based on the ISO standard number 27002.  
+Access review is often key when working within compliance restrictions (Sarbanes Oxley 404 for financial systems, CRBF 97-.02 in the world of banking, Solvency II in the insurance world, and ISAE 3402 for hosting companies, to name but a few). For this reason it is included in most security policies, including those based on the ISO standard number 27002.
 
 #### What is an access review?
 
@@ -47,7 +49,7 @@ These are transverse reviews with regard to the applications (one person has acc
 
 These reviews involve asking an application manager to check that access rights are correctly configured for their application.  
 
-This exercise is usually focused on a sub-set of access accounts:  
+This exercise is usually focused on a sub-set of access accounts:
 
 1. Accounts with wider access rights
 2. Technical accounts, known as 'service accounts' that are not linked to particular individuals.
@@ -94,7 +96,7 @@ Obviously, an access review involves two major difficulties:
 1. Getting an overall picture of people and their access rights.
 2. Organizing and motivating a large number of actors.
 
-##### Putting together an overall picture of people and of access rights to an information system
+##### Putting together an overall picture of people and of access rights to an information system.
 
 This catalog of access rights provides the answers to the following questions:  
 
@@ -115,11 +117,11 @@ A lack of empathy between the actors often leads to rubber stamping signature of
 
 As you will discover in the following chapter RadiantOne Identity Analytics solves this problem thanks to its self-service, compliance driven, access review capabilities.
 
-### RadiantOne Identity Analytics Access Review Overview
+## RadiantOne Identity Analytics Access Review Overview
 
 RadiantOne Identity Analytics embeds compliance driven user access review interface. Through this interface you can configure an access review perimeter and run an access certification campaign. Users will then have to review their entries either online through the GUI or offline thanks to microsoft excel spreadsheet reports. At the end of the day, this interface also manages the remediation process so that you are sure that all decisions taken during the access certification campaign are enforced.
 
-Here is a quick list of the features available in compliance drive access review:
+Here is a quick list of the features available in compliance driven access review:
 
 - Can configure a precise perimeter of what needs to be reviewed
 - Can mix organisational review and application review in a single campaign

@@ -5,29 +5,29 @@ description : "Identity Analytics Access Review Guide"
 
 # Technical Corner
 
-This chapter explains how access review are configured in RadiantOne Identity Analytics, technically speaking.
-This information is only useful if you have deployed Identity Analytics 'on-prem' and you want to leverage / extend access review.
+This chapter explains how access review are configured in RadiantOne Identity Analytics, technically speaking.  
+This information is only useful if you have deployed Identity Analytics 'on-prem' and you want to leverage / extend access review.  
 
 ## Data model
 
 ### Review
 
-When creating an access review campaign, all data to be reviewed (the review perimeter) is marked in the Identity Analytics  data model in the form of `ticketreview`
-All those `ticketreviews` are attached to a `ticketlog` which represents the campaign.
+When creating an access review campaign, all data to be reviewed (the review perimeter) is marked in the Identity Analytics  data model in the form of `ticketreview`.  
+All those `ticketreviews` are attached to a `ticketlog` which represents the campaign.  
 
-Information about the review campaign and the review status of each entry are written down in the tickets. `ticketreview` are updated on-the-fly every time a decision is taken. As a result, information in the Identity Ledger is a **real-time** view of the current campaign progress.
+Information about the review campaign and the review status of each entry are written down in the tickets. `ticketreview` are updated on-the-fly every time a decision is taken. As a result, information in the Identity Ledger is a **real-time** view of the current campaign progress.  
 
 Each entry to review is associated with a **(R)** esponsible and an **(A)** ccountable for the review. This is done through links from the `ticketreview` to the *accountable identity* and the *responsible identity*
 
-Here is a `view` of an access right campaign.
+Here is a `view` of an access right campaign.  
 
-![](./media/image100.png)
+![](./media/image100.png)  
 
-> [!note] As a campaign is launched manually, the `ticketlog` issuer is the one who launched the campaign.
+> As a campaign is launched manually, the `ticketlog` issuer is the one who launched the campaign. 
 
-> [!note] When the campaign is initialized, the same reviewer information is assigned to the `ticketreview` as Accountable **and** Responsible. Responsible link is the one used to display entries to be reviewed by reviewers. When a reassignment occurs, only the *Responsible* link is updated, *Accountable* link never changes. As a result, you can spot reassigned entries by comparing accountableuid and responsibleuid (an entry is reassigned if they are different).
+> When the campaign is initialized, the same reviewer information is assigned to the `ticketreview` as Accountable **and** Responsible. Responsible link is the one used to display entries to be reviewed by reviewers. When a reassignment occurs, only the *Responsible* link is updated, *Accountable* link never changes. As a result, you can spot reassigned entries by comparing accountableuid and responsibleuid (an entry is reassigned if they are different).  
 
-Campaign information is stored as such:
+Campaign information is stored as such:  
 
 | Campaign     |                                            |
 |--------------|--------------------------------------------|
@@ -80,9 +80,9 @@ Review `status` value is one of the following value:
 | not reviewed   | Marked as not reviewed                                 |
 | to be reviewed | Initial status: Entry needs to be reviewed             |
 
-> [!note] Entries to review are marked as *to be reviewed* at the very beginning of the campaign; those are the entries displayed to the reviewers. Entries still not reviewed when the campaign is finalized can be marked as *not reviewed*
+> Entries to review are marked as *to be reviewed* at the very beginning of the campaign; those are the entries displayed to the reviewers. Entries still not reviewed when the campaign is finalized can be marked as *not reviewed*
 
-> [!note] *reassign* is a special status used when a reviewer indicates that he considers himself as not being the correct reviewer for some entries. Those entries have to be reassigned by the campaign owner through the management interface.
+> *reassign* is a special status used when a reviewer indicates that he considers himself as not being the correct reviewer for some entries. Those entries have to be reassigned by the campaign owner through the management interface.
 
 `custom3` contains the origin of the reviewer. It can be:
 
@@ -113,12 +113,12 @@ Ticketlog information is:
 | title                | Review campaign internal unique identifier                 |
 | tickettype           | ADHOC_UAR_COMPLIANCE                                       |
 
-> [!note] `title` contains the review campaign `ticketlog` recorduid. As a result, if you want to check if a campaign is finalized you either have to create a *business view* and perform a join between those two ticketlogs with:
+> `title` contains the review campaign `ticketlog` recorduid. As a result, if you want to check if a campaign is finalized you either have to create a *business view* and perform a join between those two ticketlogs with:
 > `reviewticketlog.recorduid=finalizedticketlog.title`
 
-> [!note] Finalized ticketlog contains the **compliance report**
+> Finalized ticketlog contains the **compliance report**
 
-> [!note] You can also detect if a review is finalized by checking the review campaign status metadata 
+> You can also detect if a review is finalized by checking the review campaign status metadata 
 
 ### Remediation
 
@@ -147,9 +147,9 @@ Remediation information is stored in the remediation `reviewticket` as such
 
 `status` contains the current review ticket status. This printable value depends on the remedation type (manuel, automated, ...) in case of an automated review through an ITSM system, this value contains the current ITSM ticket status.
 
-`custom2` contains the remediation closed status. This information is managed by RadiantOne Identity Analytics and helps to identify whether this remediation is still active or closed. 
+`custom2` contains the remediation closed status. This information is managed by RadiantOne Identity Analytics and helps to identify whether this remediation is still active or closed.  
 
-> [!note] you cannot rely on `status` to check for the active remediation state as `status` contains a printable status which depends on the remediation type
+> you cannot rely on `status` to check for the active remediation state as `status` contains a printable status which depends on the remediation type
 
 | Remediation closed status |                                              |
 |---------------------------|----------------------------------------------|
@@ -167,7 +167,7 @@ As you can notice in the upper table, the only case where a remediation has been
 | embedded         | Manual remediation through RadiantOne Identity Analytics                                                      |
 | itsm             | Managed remediation through an ITSM system, as several ITSM can be declared in Identity Analytics, <br> `custom7` contains the Identity Analytics ITSM instanceid                                            |
 
-> [!warning] A *remediation ticketreview* is **not** associated with the access right which needs to be remediated. It is associated with a *dummy* reviewed metadata. When configured this way, this ticketreview will never diseapear even when the access right itself diseapear when refreshing the Identity Ledger. A printable version of the access right is available in `custom1`.
+> **Important Note** A *remediation ticketreview* is **not** associated with the access right which needs to be remediated. It is associated with a *dummy* reviewed metadata. When configured this way, this ticketreview will never diseapear even when the access right itself diseapear when refreshing the Identity Ledger. A printable version of the access right is available in `custom1`.
 
 ## create / update review status
 
@@ -191,8 +191,8 @@ Several workflows are available to automatically create/update remediations. You
 
 | Workflows                               |                                                                                                    |
 |-----------------------------------------|----------------------------------------------------------------------------------------------------|
-| inittickets (bwr_inittickets)         | Used to automatically launch all "pending" remediations.                                                |
-| refreshtickets (bwr_refreshtickets)                          | Used to automatically refresh all active ITSM tickets status                   |
+| inittickets (`bwr_inittickets`)         | Used to automatically launch all "pending" remediations.                                                |
+| refreshtickets (`bwr_refreshtickets`)                          | Used to automatically refresh all active ITSM tickets status                   |
 
 ## Self-Reassignment
 
