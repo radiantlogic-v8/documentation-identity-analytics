@@ -11,14 +11,14 @@ By default, only `functionaladmin`, `auditor` and `technicaladmin` have access t
 
 Tons of KPIs are pre-computed and attached to the entities, most of them are available in the search pages, thus facilitating analysis from the search results:  
   
-- empty groups  
-- groups with the most accounts  
-- groups with the less accounts  
-- accounts with the most groups  
-- accounts with the less groups  
+- empty groups
+- groups with the most accounts
+- groups with the less accounts
+- accounts with the most groups
+- accounts with the less groups
 - ...
 
-Right click on the search table and select "configure" to show/hide the KPIs. 
+Right click on the search table and select "configure" to show/hide the KPIs.  
 
 ![](./media/image33.png)
 
@@ -26,15 +26,16 @@ The KPIs are part of the datamodel, as a result you can leverage those KPIs in y
 
 ![](./media/image34.png)
 
-Please consult the ["Computed KPIs"](#computed-kpis) of this documentation for futher information regarding those KPIs.
+Please consult the ["Computed KPIs"](./05-kpi#computed-kpis) of this documentation for further information regarding those KPIs.
 
 ## How to apply filter in search pages  
+
 Clicking on the magnifier upper right will list all the organisations, or will filter the result when the "form mode" or the "free search" mode have been used on top of the table.
 The "form mode" is the default filter which consist of a form to fill in with the search criteria.  
 
 To use the "free search" mode, the end-user can click on "switch to free search", and then enter his criteria requested for the entity. This mode allows to build more complex queries using any attributes (including pre-computed KPIs) of the entities and relationships between entities. It helps the end-user to build its query by listing step by step all the options that are available to make the search filter more precise.
 
-Here are a few examples on organisations and on identities: 
+Here are a few examples on organisations and on identities:  
 
 In the two copyscreens below, the end-user is building his search criteria to list organisations from the finance division with identities having left the company and having members with access to SAP  
 
@@ -42,7 +43,7 @@ In the two copyscreens below, the end-user is building his search criteria to li
 
 ![](./media/image-46-SearchPage_freeSearch2.png)  
 
-In the copyscreen below, the end-user lists the result of his search criteria on identities having access to SAP, having identified risks and having left the company 
+In the copyscreen below, the end-user lists the result of his search criteria on identities having access to SAP, having identified risks and having left the company  
 
 ![](./media/image-46-SearchPage_freeSearch3.png)  
 
@@ -50,38 +51,38 @@ The end-user can sort the data in any columns that contains KPIs in ascending or
 
 ## How to save search results and build your own report  
 
-Once the end-user has built its query and obtain a result from the search page, he is able to save the query as favorite by clicking on the star icon available on the right side, so that he can use it to build new dashboard or update the existing ones. That way, all the saved queries are made available from the mashup dahsboard interfaces.
+Once the end-user has built its query and obtain a result from the search page, he is able to save the query as favorite by clicking on the star icon available on the right side, so that he can use it to build new dashboard or update the existing ones. That way, all the saved queries are made available from the mashup dashboard interfaces.
 
 ![](./media/image-47-SearchPage_favorite.png)  
 
 Once queries are saved, the end-user can list them with the history of queries by clicking on the clock icon.
 
-![](./media/image-48-SearchPage_History.png) 
+![](./media/image-48-SearchPage_History.png)  
 
 Clicking on the "options" icon will provide additional capabilities such as manage the favorites, make additional attributes available to the "free search" mode and clear the search history.  
 
 ![](./media/image-49-SearchPage_Options.png)  
 
-When selecting "manage my favorite searches", the end-user is able to Rename, Share and Delete the saved queries by clicking on the related buttons. 
+When selecting "manage my favorite searches", the end-user is able to Rename, Share and Delete the saved queries by clicking on the related buttons.  
 
-![](./media/image-49-SearchPage_OptionsManageFavorite.png) 
+![](./media/image-49-SearchPage_OptionsManageFavorite.png)  
 
 If he choses to share a selected query, he can share it either with individuals picked from the list of all identities or with all identities having a specific role, such as functional admin, technical admin, auditor or any role defined in the Identity Analytics project.  
 
-![](./media/image-49-SearchPage_OptionsManageFavorite-ShareList.png) 
+![](./media/image-49-SearchPage_OptionsManageFavorite-ShareList.png)
 
-Once the end-user has saved his queries, he can use them to create or update his own mashup dashboards. 
-When adding and creating a new widget in a mashup dashboard he can select them. 
-In the menu on the left, he can also reach the page Audit > My Analytics to start creating a new reports.  
+Once the end-user has saved his queries, he can use them to create or update his own mashup dashboards. When adding and creating a new widget in a mashup dashboard he can select them. In the menu on the left, he can also reach the page Audit > My Analytics to start creating a new reports.  
+
 In this page the same features are available as in the search pages to create new queries, saved them, use the already existing/saved queries. The only difference is that he needs to select first the entity on which he wants to create a new query.  
-By clicking on the pen on the right side of the table, the end-user can then build its own table and select the attributes he wants to display by columns. 
-Once done, clicking on the button "Save as..." bottom right will allow him to save it as a new mashup dahboard.
+By clicking on the pen on the right side of the table, the end-user can then build its own table and select the attributes he wants to display by columns.  
 
-![](./media/image-49-SearchPage_OptionsManageFavorite-MashupDashboard.png) 
+Once done, clicking on the button "Save as..." bottom right will allow him to save it as a new mashup dashboard.
+
+![](./media/image-49-SearchPage_OptionsManageFavorite-MashupDashboard.png)  
 
 Finally, the end-user will benefit from all the advanced features of mashup dashboard to enrich his newly created dashboard and to share it with others.
 
-![](./media/image-49-SearchPage_OptionsManageFavorite-MashupDashboard2.png) 
+![](./media/image-49-SearchPage_OptionsManageFavorite-MashupDashboard2.png)  
 
 Please refer to the online [general documentation on dashboards](https://developer.radiantlogic.com/) to know more about how to install and use them.
 
@@ -89,7 +90,8 @@ Please refer to the online [general documentation on dashboards](https://develop
 
 Starting with IAS/IAP 1.1 Analytics are accessible through the search pages in order to perform analysis on search results. Depending on your role, you can access to those analytics.
 
-For instance: 
+For instance:  
+
 - You search for 'VIP identities' and you want to access to a report displaying their access rights and what changed since a given data
 - You search for orphan AD accounts and you want to list their groups
 
@@ -107,16 +109,17 @@ When you click on a given analytics, it is displayed as usual but with a subtle 
 
 ## Search pages per entity  
 
-### Hierarchy search page 
+### Hierarchy search page  
 
 The Hierarchy search page allows to investigate on organisations by starting from the organisation chart.
-Clicking on an organisation will zoom on it and display the sub departements.
+Clicking on an organisation will zoom on it and display the sub departments.
 By hovering the mouse over an organisation, a tooltip appears and allows you to go to the detail page of the selected organisation by clicking on its name.
 
 ![](./media/image-45-SearchPage_orgachart.png)
 
-### organisation search page 
-The organisation search page allows to list, filter and build queries on organisations loaded in RadiantOne Identity Analytics. 
+### organisation search page
+
+The organisation search page allows to list, filter and build queries on organisations loaded in RadiantOne Identity Analytics.  
 
 The following computed KPIs are made available for organisations in the search page by default:  
 
@@ -138,9 +141,9 @@ The following computed KPIs are made available for organisations in the search p
 
 ![](./media/image-62-SearchOrga-KPIs.png)
 
-### Identity search page 
+### Identity search page  
 
-The Identities search page allows to list, filter and build queries on identities loaded in Identity Analytics. 
+The Identities search page allows to list, filter and build queries on identities loaded in Identity Analytics.  
 
 The following computed KPIs are made available for Identities in the search page by default:  
 
@@ -157,9 +160,9 @@ The following computed KPIs are made available for Identities in the search page
 
 ![](./media/image-61-SearchIdentities-KPIs.png)
 
-### Repository search page 
+### Repository search page  
 
-The Repositories search page allows to list, filter and build queries on repositories loaded in Identity Analytics. 
+The Repositories search page allows to list, filter and build queries on repositories loaded in Identity Analytics.  
 
 The following computed KPIs are made available for Repositories by default:  
   
@@ -176,9 +179,9 @@ The following computed KPIs are made available for Repositories by default:
   
 ![](./media/image-58-SearchRepositories-KPIs.png)
 
-### Account search page 
+### Account search page  
 
-The Accounts search page allows to list, filter and build queries on accounts loaded in Identity Analytics. 
+The Accounts search page allows to list, filter and build queries on accounts loaded in Identity Analytics.  
 
 The following computed KPIs are made available for Accounts by default:  
 
@@ -196,9 +199,9 @@ The following computed KPIs are made available for Accounts by default:
 
 ### Group search page
 
-The Groups search page allows to list, filter and build queries on groups loaded in Identity Analytics. 
+The Groups search page allows to list, filter and build queries on groups loaded in Identity Analytics.  
 
-The following computed KPIs are made available for Groups by default: 
+The following computed KPIs are made available for Groups by default:  
 
 | **attribute name**   | **description**                           |
 | :------------------- | :---------------------------------------- |
@@ -213,9 +216,9 @@ The following computed KPIs are made available for Groups by default:
 
 ### Application search page
 
-The Applications search page allows to list, filter and build queries on applications loaded in Identity Analytics. 
+The Applications search page allows to list, filter and build queries on applications loaded in Identity Analytics.  
 
-The following computed KPIs are made available for Applications by default: 
+The following computed KPIs are made available for Applications by default:  
 
 | **attribute name**    | **description**                                       |
 | :-------------------- | :---------------------------------------------------- |
@@ -234,9 +237,9 @@ The following computed KPIs are made available for Applications by default:
 
 ### Permission search page
 
-The Permissions search page allows to list, filter and build queries on permissions loaded in RadiantOne Identity Analytics. 
+The Permissions search page allows to list, filter and build queries on permissions loaded in RadiantOne Identity Analytics.  
 
-The following computed KPIs are made available for Permissions by default: 
+The following computed KPIs are made available for Permissions by default:  
 
 | **attribute name**  | **description**                               |
 | :------------------ | :-------------------------------------------- |
@@ -250,9 +253,9 @@ The following computed KPIs are made available for Permissions by default:
 
 ### Share search page
 
-The Share search page allows to list, filter and build queries on shares loaded in Identity Analytics. 
+The Share search page allows to list, filter and build queries on shares loaded in Identity Analytics.  
 
-The following computed KPIs are made available for Shares by default: 
+The following computed KPIs are made available for Shares by default:  
 
 | **attribute name**    | **description**                                       |
 | :-------------------- | :---------------------------------------------------- |
@@ -261,7 +264,7 @@ The following computed KPIs are made available for Shares by default:
 | nbusage               | nb of usages found                                    |
 | nbreadaccess          | nb read access                                        |
 | nbwriteaccess         | nb write access                                       |
-| nbfullcontrolaccess   | nb full controll access                               |
+| nbfullcontrolaccess   | nb full control access                                |
 | nbfolder              | nb folder                                             |
 | nbmanagedfolder       | nb managed folder                                     |
 
@@ -269,9 +272,9 @@ The following computed KPIs are made available for Shares by default:
 
 ### Folder search page
 
-The Folder search page allows to list, filter and build queries on folders loaded in RadiantOne Identity Analytics. 
+The Folder search page allows to list, filter and build queries on folders loaded in RadiantOne Identity Analytics.  
 
-The following computed KPIs are made available for Folders by default: 
+The following computed KPIs are made available for Folders by default:  
   
 | **attribute name**  | **description**                               |
 | :------------------ | :-------------------------------------------- |
@@ -280,6 +283,6 @@ The following computed KPIs are made available for Folders by default:
 | nbusage             | nb of usages found                            |
 | nbreadaccess        | nb read access                                |
 | nbwriteaccess       | nb write access                               |
-| nbfullcontrolaccess | nb full controll access                       |
+| nbfullcontrolaccess | nb full control access                        |
 
 ![](./media/image-66-SearchFolder-KPIs.png)
