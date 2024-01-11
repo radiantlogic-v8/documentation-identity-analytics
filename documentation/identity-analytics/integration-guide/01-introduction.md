@@ -52,7 +52,7 @@ All UI include temporal analysis
 
 **SECURITY BY DESIGN**
 
-You cannot see more than what is needed based on your management responsibilites
+You cannot see more than what is needed based on your management responsibilities
 
 **EXTENSIBLE**
 

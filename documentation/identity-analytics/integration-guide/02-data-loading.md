@@ -15,19 +15,19 @@ As a best practice, you should perform a first data loading with all users (both
 
 If it is not necessary, it is recommended to load only "active identities" on subsequent timeslots. An alternative could be to load both active identities & inactive identities who left less than 12 months ago.
 
-As a general rule, inactive identities are not displayed in IAP **unless** they still have active accounts. 
+As a general rule, inactive identities are not displayed in IAP **unless** they still have active accounts.  
 
 ## Organisation
 
-Organisations are loaded as usual. Although it is not recommended, you can assign several organisations to an identity. 
+Organisations are loaded as usual. Although it is not recommended, you can assign several organisations to an identity.  
 
 ## Line manager
 
-A new management link is available starting with Braille: `Management of Identity` 
+A new management link is available starting with Braille: `Management of Identity`  
 
 Through this link you can dynamically load, compute, manually assign who is the line manager of whom.
 
-Like any other management links, an `expertise domain` is available with the link. As a result you can assign several managers to an identity with different `expertise domain`. 
+Like any other management links, an `expertise domain` is available with the link. As a result you can assign several managers to an identity with different `expertise domain`.  
 
 The best practice is to load HR management information in Identity & Organisation objects (such as operational manager link and organisation manager link) and to configure the line manager link based on the most relevant information.
 
@@ -35,7 +35,7 @@ This means that at the end of the day, the line manager link is no longer read o
 
 As a best practice, you should also rely on this new link for your Access Certification campaigns as it is much more flexible (you can manage data quality issues from the web portal directly)
 
-This link is the one displayed in IAP everytime you have "line manager" information displayed.  
+This link is the one displayed in IAP every time you have "line manager" information displayed.  
 
 ## Resource manager
 
@@ -55,13 +55,13 @@ The repositoryfamily attribute can be used in search pages as well as to overrid
 
 ## Account
 
-Accounts are loaded as usual. 
+Accounts are loaded as usual.  
 
 Please note that disabled accounts are not displayed in IAP, except in repository details. If the disabled attribute is not fulfilled, the account is considered active.
 
 ## Application
 
-You can load applications as usual. All applications must be identified with `applicationtype=Profile` 
+You can load applications as usual. All applications must be identified with `applicationtype=Profile`  
 
 If you are loading several instances of a same system, it is a best practice to identify the system through the `applicationfamily` attribute. or instance, if you are loading several SAP systems, you should have `applicationfamily=SAP`
 The `applicationfamily` attribute can be used in search pages as well as to override reports & analytics (see advanced section)
@@ -78,9 +78,9 @@ For fine grain permission, the best practice is to fulfill permissiontype with a
 
 ## Business Activity
 
-Business activities are the prefered way to perform SoD checks.
+Business activities are the preferred way to perform SoD checks.
 As a result, if you want to configure SoD check, you **MUST** load business activities.
-Business activities are loaded as "permission" objects, you **MUST** identify them with `permissiontype=Activity` 
+Business activities are loaded as "permission" objects, you **MUST** identify them with `permissiontype=Activity`  
 
 ## SoD matrix
 
