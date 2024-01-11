@@ -16,7 +16,9 @@ Four types of review can be configured:
 
 In this chapter, we will configure and launch an application access rights review. The repository accounts review and group membership review use the same principles, and a dedicated documentation is also available for the PAM Booster Designed for CyberArk.
 
-> With IAP version 2.1, the application access rights review comes with a new "sign off" principles and the ability to launch remediation just after a *reviewer* signed off and not only after the campaign is finalized. For this reason, before upgrading IAP to 2.1, it is necessary to finalize all web-based reviews.  
+> As a reminder in IAP version 2.2 a new "sign off" principle has been added to the review process, as well as the the ability to launch the remediation process as soon as the reviewer signs off.  
+>
+> Due to this change in behavior it is **necessary** to finalize **all** web-based reviews **before** upgrading IAP to version 2.1 or 2.2.  
 
 ![](./media/newcampaign.png)  
 
@@ -52,13 +54,13 @@ In our context we want to review ALL access rights on the following applications
 
 You to choose the applications to review using two different methods, "Static Selection" or "Selection by Tags".
 The first method is to pick in the list the applications, so here to select SAGE and Elyxo applications:
-  
+
 ![](./media/IAP142.png)  
-  
+
 The second method consist of using Tags, which could be very useful when the number of applications to select is high. In the example below, we are using tags ISO27002 and SOX to choose the three required applications:
-  
+
 ![](./media/IAP141.png)  
-  
+
 Please note, four steps are required to configure a review campaign:  
 
 1. The first step helps you refine your review perimeter,
@@ -68,7 +70,7 @@ Please note, four steps are required to configure a review campaign:
 
 ALL selected data MUST be reviewed, the *reviewer* is automatically identified based on the entries to be reviewed as configured in the second step "2. Define Review Strategy".  
 For example:  
-  
+
 - user accounts are reviewed by the line manager
 - technical accounts are reviewed by the application owner
 
@@ -80,7 +82,7 @@ To refine the review perimeter, the advanced mode in the first step allows you t
 
 You can configure that only some accounts will be part of the review, either by playing with the options (user accounts, orphaned accounts, ...) or by tagging the accounts you want to include in your review thanks to the account search interface.
 
-This is super flexible as it can be for instance used to review only accounts with some attributes or characteristics such as:
+This is super flexible as it can be for instance used to review only accounts with some attributes or characteristics such as
 
 - Accounts from people working in a given division / country / ...
 - Accounts with a given sensitivity level
@@ -112,8 +114,8 @@ Keep in mind that at the end the review configuration, only the lines whom **BOT
 
 In our use case we want to review **ALL** permissions, so lets leave this part empty.
 
-## Step 2 - Define Review Strategy  
-  
+## Step 2 - Define Review Strategy
+
 ### Incremental Review Strategy
 
 This section will help you to leverage previous access certification campaigns.
@@ -121,8 +123,8 @@ When enabled, previous review status will be used to "prefill" review status and
 
 This happens **only** when:
 
-- The entry has been reviewed in the configured time frame (*A valid entry is an entry which has been reviewed in the last X days*)  
-- In case of an user account, account owner characteristics have not changed since the last review:  
+- The entry has been reviewed in the configured timeframe (*A valid entry is an entry which has been reviewed in the last X days*)
+- In case of an user account, account owner characteristics have not changed since the last review:
   - Organisation
   - Job Title
   - Internal status
@@ -209,11 +211,11 @@ When offline mode is enabled you can send notification and gentle reminder email
 - Download and Upload the excel file  
 
 By the *review owner* from the review follow-up interface:
-  
+
 ![](./media/IAP215.png)  
-  
+
 By the *reviewer* from his Access360 interface:
-  
+
 ![](./media/IAP155.png)  
 
 - The number of review entries is displayed  
@@ -226,47 +228,47 @@ By the *reviewer* from his Access360 interface:
 
 Once everything is fulfilled, click on **Launch the Review** to launch your review.  
 Please note that it will launch the review **immediately**, but keep calm, it can be cancelled if needed.  
-  
-## Step 4 - Send an email notification to the reviewers  
-  
+
+## Step 4 - Send an email notification to the reviewers
+
 Once your review campaign has been launched, it appears in the compliance review management page.  
 You can access to this page through the menu *Review / Access Review Management*  
-  
+
 ![](./media/IAP153.png)  
 
 The very first thing you will want to do is to send a notification email to the *reviewers*. Select your review campaign and click on the *Send a message* button
 
 ![](./media/IAP154.png)  
-  
+
 You have several choices here:  
 
-- Send a message to all the *reviewers* with all the entries as an attachment  
-- Send a message to the remaining *reviewers* only with the remaining entries to review as an attachment  
-- Send an email to all the *reviewers* without attachment  
-- Send an email to the remaining *reviewers* without attachment  
-  
+- Send a message to all the *reviewers* with all the entries as an attachment
+- Send a message to the remaining *reviewers* only with the remaining entries to review as an attachment
+- Send an email to all the *reviewers* without attachment
+- Send an email to the remaining *reviewers* without attachment
+
 The first two choices can be useful if you want to send the review content along with the email for instance when you want to enable "offline" reviews by some *reviewers* (reviewing through an excel spreadsheet instead of reviewing in the UI)  
 The latter are more "traditional" as they do not include any attachment.  
-  
+
 Depending on your review strategy and your review phase (initial notification,gentle reminder), you have to select the right Mail Strategy in the combo box.  
-  
+
 In our case, we choose *Send an email to all the reviewers without attachment*, we refine the mail content and we send the message.
 Note that we are also sending those mails to `security_dataroom@acme.com`, this is a best practice as it can be used at a later time to prove to the auditors that notifications and gentle reminders have been sent to the *reviewers*.  
-  
+
 ![](./media/image16.png)  
-  
+
 The mails look like  
-  
+
 ![](./media/image17.png)  
-  
-## Step 5 - Reviewing entries  
-  
+
+## Step 5 - Reviewing entries
+
 *Reviewers* have received an email and will connect to the RadiantOne Identity Analytics platform to review their entries. *Reviewers* have to select the review campaign to review.  
-  
+
 ![](./media/IAP155.png)  
-  
+
 As a *reviewer* I can approve, revoke or comment one by one, I can also perform bulk operations by selecting several entries at once.  
-  
+
 ![](./media/IAP156.png)  
 
 I can export data when clicking on the advanced options on the right (...) in CSV or XSLX, activate/deactivate advanced filtering and configure columns.
@@ -297,32 +299,32 @@ This is useful if I want to review the entries by Login, Identity, Permission, S
 ![](./media/IAP159.png)  
 
 Once everything has been reviewed, a pop-up window appears asking me to "sign off" or "display all reviewed entries" if I change my mind and want to update later the review status for some of my entries.  
-  
+
 ![](./media/IAP159-1.png)  
-  
+
 If I chose "display all reviewed entries", I can update anytime some of the entries decision and chose to "sign off" later.  
-  
+
 ![](./media/IAP159-2.png) 
 
-If I chose "sign off", all my decisions will be ready for remediation and I'm not able to change my mind anymore untill the *review owner* "Force Bulk Reset" for some or all of my reviewed entries.  
-  
+If I chose "sign off", all my decisions will be ready for remediation and I'm not able to change my mind anymore until the *review owner* "Force Bulk Reset" for some or all of my reviewed entries.  
+
 ![](./media/IAP159-3.png)  
 
 I can close my web browser. Depending on the configuration chosen, the "signed-off" entries will automatically go in a "pending remediation" state within the next days or manually by the *review owner*.  
 Then the *technical owner* or *review owner* will have the ability to process and monitor the remediation from the remediation management user interface.  
-  
+
 ![](./media/IAP159-4.png)  
-  
+
 ### Grouped list mode review  
-  
+
 To facilitate the review, *reviewers* can group entries by account login, identity name, permission or application. This mode allows bulk approval or bulk revocation.  
-  
+
 Grouped by permission:  
-  
+
 ![](./media/IAP170.png)  
-  
+
 Grouped by application:  
-  
+
 ![](./media/IAP171.png)  
 
 ### Pivot table mode review  
@@ -340,52 +342,52 @@ Filters on the pivot table can be directly applied to facilitate review.
 ## Step 6 - Measuring review campaign progress and sending gentle reminders
 
 Once connected as an administrator to the RadiantOne Identity Analytics platform, I select *Access Review Management* in the menu and pick my review campaign to show its details.  
-  
+
 I can have a look at the current status and statistics.  
-  
+
 ![](./media/IAP161.png)  
 
 *Reviewers* that have already signed off their user access review are are shown in the left-hand table, like Samantha Schwartz here. In the table on the right, reviewers who have not yet started reviewing entries, or who are in the process of reviewing them, or who have reviewed all entries but have not yet signed off their review, are displayed.  
 
 ![](./media/IAP162.png)  
-  
+
 I can also browse through the review perimeter to check the current review status.  
-  
+
 ![](./media/IAP163.png)
 
 Then I can have a look at the entries signed off so far. When entries are in that particular state, it means that the *reviewer* cannot change his decision anymore. These entries are ready to be remediated. The remediation can be launched automatically based on the script that is executed daily and manually by the *review owner*.  
 By selecting entries and clicking on "Proceed Now", the "signed off" entries will be immediately set in "pending remediation" state.  
 By selecting entries and clicking on "Force Bulk Reset", the entries will once again be available to the *reviewer* so that he can change his decisions.  
-  
-![](./media/IAP164.png)  
-  
-> The "proceed now" option is also hidden by default. To make it available, it requires to set the `ias_reviewcanproceedsignedentries` variable to true.  
 
-> To automate the change from "signed off" to "pending remediation", the variable `ias_reviewautomateproceedsignedentries` and `ias_reviewproceedsignedentriesdelay` have to be set to in the configuration of the project. When `ias_reviewautomateproceedsignedentries` is set to "true" and `ias_reviewproceedsignedentriesdelay` is set to a number of days, the entries will automatically go from a "Signed-off" state to a "Proceed: Remediation Pending" state after the number of days indicated. The remediation will then have to be launched and managed through the "Remediation Management" page. To allow this automation, the related workflow (bwaccess360_automateProceedSignofAccessRights) needs to be launch using a batch.  
+![](./media/IAP164.png)  
+
+> The "proceed now" option is also hidden by default. To make it available, it requires to set the `ias_reviewcanproceedsignedentries` variable to `true`.  
+
+> To automate the change from "signed off" to "pending remediation", the variable `ias_reviewautomateproceedsignedentries` and `ias_reviewproceedsignedentriesdelay` have to be set to in the configuration of the project. When "ias_reviewautomateproceedsignedentries" is set to `true` and `ias_reviewproceedsignedentriesdelay` is set to a number of days, the entries will automatically go from a "Signed-off" state to a "Proceed: Remediation Pending" state after the number of days indicated. The remediation will then have to be launched and managed through the "Remediation Management" page. To allow this automation, the related workflow (bwaccess360_automateProceedSignofAccessRights) needs to be launch using a batch.  
   
 For now, I want to send a gentle reminder to the *reviewers*, I go back to the *Access Review Management* interface, I select my review and click *Send a message* .  
   
 ![](./media/image31.png)
 
 ## Step 7 - Reviewing entries and delegate some entries to review to my team
-  
+
 Noel HOGAN receives a gentle reminder, he connects to the RadiantOne Identity Analytics interface to do the review.  
 He wants to delegate the review of all the "Elyxo" entries to a member of his team, responsible for this application.  
-  
+
 He filters the list to show only entries related to elyxo  
-  
+
 ![](./media/IAP165-1.png)  
-  
+
 and he selects all entries thanks to the *Check all* option  
-  
+
 ![](./media/IAP165-2.png)  
-  
+
 and select *Ask team for help...*  
-  
+
 ![](./media/IAP165.png)  
-  
+
 Noel can now pick a team member to delegate those entries.  
-  
+
 ![](./media/IAP165-3.png)  
 
 The following delegation principles are applied:
@@ -393,10 +395,11 @@ The following delegation principles are applied:
 - When an individual reviews an entry as a *line manager* of the account owner, he can only delegate this entry to a team member
 - When an individual reviews an entry as an *application business owner*, he can only delegate this entry to the other application business owners
 - When you want to delegate several entries at once, the list **must** be uniform (you cannot delegate at the same time *line managers* entries and *application owners* entries)
-- When you are the *default reviewer* of an entry, you cannot delegate it  
+- When you are the *default reviewer* of an entry, you cannot delegate it
 - You cannot delegate the review of an entry in a way that one will have to review himself
 
 When Noel clicks on "Check", if the person cannot be the *reviewer*, the solution gives him the reason in a window:
+
 ![](./media/IAP166.png)
 
 In case of doubt, you can display the 'Reviewer origin' column in the table.
@@ -406,16 +409,14 @@ Noel selects Philip TORRES in the list:
 ![](./media/IAP167.png)  
 ![](./media/IAP168.png)  
 
-Once done, the entries are now assigned to Philip.  
-However, if he changed his mind, he still can display the related entries by unchecking the option "Hide entries delegated to team members".
-He can also add columns, like the "Reviewer name", to manage entries if he has different delegatees, by clicking on the "..." on the right and selecting "Configure columns".
+Once done, the entries are now assigned to Philip. However, if he changed his mind, he still can display the related entries by unchecking the option "Hide entries delegated to team members". He can also add columns, like the "Reviewer name", to manage entries if he has different delegatees, by clicking on the "..." on the right and selecting "Configure columns".
 
 ![](./media/IAP168-1.png)  
-  
+
 Then he still can select them and reset them in order to delegate them to another person.  
 
 ![](./media/IAP168-2.png)  
-  
+
 > From a review campaign management perspective we keep track of all the delegations by enforcing the RACI principles.  
 > The initial *reviewers* are considered as **accountable** while the delegated *reviewers* are considered as **responsible**.  
 > This can be highlighted in the review campaign management interface.
@@ -485,7 +486,7 @@ You can also browse the review campaign details to access the KPIs
 
 Once your review campaign is finalized, or once a *reviewer* has signed off his review if you activated the immediate remediation, requested remediations are automatically triggered.
 You can follow up the remediation progress through the menu entry *Remediation management*.  
-  
+
 > To automate the change from "signed off" to "pending remediation", the variable `ias_reviewautomateproceedsignedentries` and `ias_reviewproceedsignedentriesdelay` have to be set to in the configuration of the project. When `ias_reviewautomateproceedsignedentries` is set to "true" and `ias_reviewproceedsignedentriesdelay` is set to a number of days, the entries will automatically go from a "Signed-off" state to a "Proceed: Remediation Pending" state after the number of days indicated. The remediation will then have to be launched and managed through the "Remediation Management" page. To allow this automation, the related workflow (`bwaccess360_automateProceedSignofAccessRights`) needs to be launch using a batch.  
 
 By default, it gives you a consolidated overview of *all* the remediation, whatever the review campaigns.

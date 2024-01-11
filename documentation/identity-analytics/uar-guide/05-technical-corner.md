@@ -30,7 +30,7 @@ Here is a `view` of an access right campaign.
 Campaign information is stored as such:  
 
 | Campaign     |                                            |
-|--------------|--------------------------------------------|
+| ------------ | ------------------------------------------ |
 | recorduid    | Campaign internal unique identifier        |
 | ticketnumber | Campaign unique number                     |
 | title        | Campaign name                              |
@@ -58,21 +58,21 @@ The campaign current status is stored in a dedicated metadata named `bwr_campaig
 
 Review information is stored as such:
 
-| Reviewed item |                                                                                                                 |
-|---------------|-----------------------------------------------------------------------------------------------------------------|
-| recorduid     | reviewed item internal unique identifier                                                                        |
-| status        | reviewed item status                                                                                            |
-| comment       | reviewed item comment                                                                                           |
-| actiondate    | reviewed item last action date                                                                                  |
-| custom1       | reviewed item printable label                                                                                   |
-| custom2       | in case of a user account, characteristics of the account owner in order to check for movements between reviews by comparing the values|
-| custom3       | origin of the reviewer                                                                                          |
-| custom4       | what is reviewed (account, right)                                                                                          |
+| Reviewed item |                                                                                                                                         |
+| ------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| recorduid     | reviewed item internal unique identifier                                                                                                |
+| status        | reviewed item status                                                                                                                    |
+| comment       | reviewed item comment                                                                                                                   |
+| actiondate    | reviewed item last action date                                                                                                          |
+| custom1       | reviewed item printable label                                                                                                           |
+| custom2       | in case of a user account, characteristics of the account owner in order to check for movements between reviews by comparing the values |
+| custom3       | origin of the reviewer                                                                                                                  |
+| custom4       | what is reviewed (account, right)                                                                                                       |
 
 Review `status` value is one of the following value:
 
 | review status  |                                                        |
-|----------------|--------------------------------------------------------|
+| -------------- | ------------------------------------------------------ |
 | ok             | Approved entry                                         |
 | revoke         | Entry to be revoked                                    |
 | update         | Entry to be updated                                    |
@@ -82,19 +82,19 @@ Review `status` value is one of the following value:
 
 > Entries to review are marked as *to be reviewed* at the very beginning of the campaign; those are the entries displayed to the reviewers. Entries still not reviewed when the campaign is finalized can be marked as *not reviewed*
 
-> *reassign* is a special status used when a reviewer indicates that he considers himself as not being the correct reviewer for some entries. Those entries have to be reassigned by the campaign owner through the management interface.
+> *Reassign* is a special status used when a reviewer indicates that he considers himself as not being the correct reviewer for some entries. Those entries have to be reassigned by the campaign owner through the management interface.
 
 `custom3` contains the origin of the reviewer. It can be:
 
 | Reviewer origin (custom3) |                                                                             |
-|---------------------------|-----------------------------------------------------------------------------|
+| ------------------------- | --------------------------------------------------------------------------- |
 | linemanager               | The reviewer is the direct line manager of the account owner                |
 | applicationowner          | The reviewer is the application owner                                       |
 | permissionowner           | The reviewer is the permission owner                                        |
 | accountowner              | The reviewer is the account owner                                           |
 | groupowner                | The reviewer is the group owner                                             |
 | repositoryowner           | The reviewer is the repository owner                                        |
-| myself                    | The reviewer is the user himself                                        |
+| myself                    | The reviewer is the user himself                                            |
 | default                   | The reviewer is the default reviewer (as configured during campaign launch) |
 
 > [!warning] Although a reviewticket is not attached to a timeslot, the reviewed data is. As a result, you should be very cautious about the way you are designing your *views* as you can end up in situations where the lines won't appear because either the *Account* or the *Permission* no longer exists in the latest timeslot. If you want to display **all** this information whatever reviewed data still exists or not in the Identity Ledger, you should use *ticketreview displayname* instead of pointing to the access right.
@@ -108,7 +108,7 @@ As a `ticketlog` is a read-only information in the data model, another `ticketlo
 Ticketlog information is:  
 
 | Finalized ticket log |                                                            |
-|----------------------|------------------------------------------------------------|
+| -------------------- | ---------------------------------------------------------- |
 | recorduid            | Finalized ticketlog information internal unique identifier |
 | title                | Review campaign internal unique identifier                 |
 | tickettype           | ADHOC_UAR_COMPLIANCE                                       |
@@ -131,14 +131,14 @@ A remediation is a `ticketlog`, nevertheless, as a ticketlog is read-only, a `ti
 Remediation information is stored in the remediation `reviewticket` as such
 
 | Remediation ticket review |                                                                   |
-|---------------------------|-------------------------------------------------------------------|
+| ------------------------- | ----------------------------------------------------------------- |
 | recorduid                 | remediation internal unique identifier                            |
 | status                    | remediation printable status                                      |
 | comment                   | remediation comment                                               |
 | actiondate                | remediation last action date                                      |
 | custom1                   | remediation access right printable information                    |
 | custom2                   | remediation closed status                                         |
-| custom3                   | remediation type (embedded/itsm)                               |
+| custom3                   | remediation type (embedded/itsm)                                  |
 | custom4                   | timeslotuid when the last remediation ticket update has been made |
 | custom5                   | External ticket number (displayable info)                         |
 | custom6                   | External ticket id (internal info)                                |
@@ -149,10 +149,10 @@ Remediation information is stored in the remediation `reviewticket` as such
 
 `custom2` contains the remediation closed status. This information is managed by RadiantOne Identity Analytics and helps to identify whether this remediation is still active or closed.  
 
-> you cannot rely on `status` to check for the active remediation state as `status` contains a printable status which depends on the remediation type
+> You cannot rely on `status` to check for the active remediation state as `status` contains a printable status which depends on the remediation type
 
 | Remediation closed status |                                              |
-|---------------------------|----------------------------------------------|
+| ------------------------- | -------------------------------------------- |
 | -1                        | Remediation is ready to be launched          |
 | 0                         | Remediation is still active                  |
 | 1                         | Remediation is closed and has been done      |
@@ -162,10 +162,10 @@ As you can notice in the upper table, the only case where a remediation has been
 
 `custom3` contains the remediation type, it can be
 
-| Remediation type |                                                                                           |
-|------------------|-------------------------------------------------------------------------------------------|
-| embedded         | Manual remediation through RadiantOne Identity Analytics                                                      |
-| itsm             | Managed remediation through an ITSM system, as several ITSM can be declared in Identity Analytics, <br> `custom7` contains the Identity Analytics ITSM instanceid                                            |
+| Remediation type |                                                                                                                                                                   |
+| ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| embedded         | Manual remediation through RadiantOne Identity Analytics                                                                                                          |
+| itsm             | Managed remediation through an ITSM system, as several ITSM can be declared in Identity Analytics, <br> `custom7` contains the Identity Analytics ITSM instanceid |
 
 > **Important Note** A *remediation ticketreview* is **not** associated with the access right which needs to be remediated. It is associated with a *dummy* reviewed metadata. When configured this way, this ticketreview will never diseapear even when the access right itself diseapear when refreshing the Identity Ledger. A printable version of the access right is available in `custom1`.
 
@@ -174,7 +174,7 @@ As you can notice in the upper table, the only case where a remediation has been
 Several workflows are available to create/update reviews. You should use them whenever possible. Those workflows are located in `/workflow/bw_access360/`
 
 | Workflows                               |                                                                                                    |
-|-----------------------------------------|----------------------------------------------------------------------------------------------------|
+| --------------------------------------- | -------------------------------------------------------------------------------------------------- |
 | assignAccessRightsReviewTickets         | Used to initialize an access rights review campaign                                                |
 | deleteCampaign                          | Used to delete **all** tickets associated with a campaign, including remediation                   |
 | writeAccessRightsReviewTickets          | Used to update campaign entries review status                                                      |
@@ -189,10 +189,10 @@ Several workflows are available to create/update reviews. You should use them wh
 
 Several workflows are available to automatically create/update remediations. You can launch them through a scheduled batch (`igrc_workflow.[cmd|sh]`) if you want automate remediation creation or ITSM tickets refresh. Those workflows are located in `/workflow/bw_iasreview/`
 
-| Workflows                               |                                                                                                    |
-|-----------------------------------------|----------------------------------------------------------------------------------------------------|
-| inittickets (`bwr_inittickets`)         | Used to automatically launch all "pending" remediations.                                                |
-| refreshtickets (`bwr_refreshtickets`)                          | Used to automatically refresh all active ITSM tickets status                   |
+| Workflows                           |                                                              |
+| ----------------------------------- | ------------------------------------------------------------ |
+| inittickets (bwr_inittickets)       | Used to automatically launch all "pending" remediations.     |
+| refreshtickets (bwr_refreshtickets) | Used to automatically refresh all active ITSM tickets status |
 
 ## Self-Reassignment
 

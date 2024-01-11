@@ -10,11 +10,12 @@ This chapter presents review campaign configuration examples to cover the most c
 ## Review all access rights for some applications  
 
 This is the most common use case, in order to do so, you have to select the applications that you want to include in your access review campaign.  
-You can do it one application by one application:
+You can do it one application by one application:  
+
 ![](./media/IAP142.png)  
 
 Or you can do it by using tags:  
-  
+
 ![](./media/IAP143.png)  
 
 The default configuration will review **all** active accounts direct access rights (limited to permission type 'Role')  
@@ -30,11 +31,11 @@ In order to do so you just have to select *user accounts* in the *Advanced Mode*
 
 ![](./media/IAP144-bis.png)  
 
-## Review Finance departement access rights per line manager  
+## Review Finance department access rights per line manager  
 
 It can be useful to restrict your access review to a given organisation, especially in large organisation.  
 Let's say for instance that you want to review SOX applications access rights in the *Finance Department*.  
-  
+
 In order to do so, you will have first to tag all accounts belonging to people working for the *finance departement*.  
   
 > You can do it by performing an account search followed by a bulk tagging operation.  
@@ -70,10 +71,10 @@ In order to review sensitive access rights you first have to tag your sensitive 
 
 Once this is done, you configure your access right campaign by  
 
-- Selecting the tag in the *Permissions Review Perimeter*  
-  
+- Selecting the tag in the *Permissions Review Perimeter*
+
 ![](./media/IAP205.png)  
-  
+
 - Force the application owner to review everything in the next step *2. Define Review Strategy*:
 
 ![](./media/IAP205-bis.png)  
@@ -83,7 +84,7 @@ Once this is done, you configure your access right campaign by
 In the next step *2. Define Review Strategy*, you can pick *user accounts by themself* if you want the user reviewing themselves. This is very useful to review at-risk users or control defects such as outliers and unused access.  
 
 ![](./media/image108.png)  
-  
+
 ## Review Only the changes since the last review
 
 In order to review only the changes that occurred since the last review, you have to configure your *Incremental Review Strategy* in the step *2. Define Review Strategy*:
@@ -117,20 +118,18 @@ The next steps are the same that application access rights review. Incremental r
 ![](./media/IAP210-bis.png)  
 
 The available *reviewer strategies* are:  
- 
-- User accounts by line manager, technical accounts by the repository owner  
-- User accounts by line manager, all other accounts by the repository owner  
-- User accounts by themselves, all other accounts by the repository owner  
-- All accounts by the repository owner  
-- All accounts by the default reviewer  
-  
+
+- User accounts by line manager, technical accounts by the repository owner
+- User accounts by line manager, all other accounts by the repository owner
+- User accounts by themself, all other accounts by the repository owner
+- All accounts by the repository owner
+- All accounts by the default reviewer
+
 When the accounts review is launch, review is available on "Access 360" section:  
-  
+
 ![](./media/IAP211.png)  
-  
+
 Reviewers can start the accounts review. They can approve, revoke or comment one by one, they can also perform bulk operations by selecting several entries at once.  
-  
-> the behavior is the same as for Application Rights Review, but without the sign off and immediate remediation capabilities that have been introduced in IAP version 2.1.  
 
 ![](./media/IAP212.png)  
 
@@ -147,23 +146,21 @@ The next steps are the same that application access rights review. Incremental r
 
 The available *reviewer strategies* are:  
 
-- User account members by line manager, technical/service account members by the repository owner  
-- User account members by line manager, all other members by the repository owner  
-- User account members by themselves, all other members by the repository owner  
-- User account members by line manager, technical/service account members by the group owner  
-- User account members by line manager, all other members by the group owner  
-- User account members by themselves, all other members by the group owner  
-- All members by the group owner  
-- All members by the repository owner  
-- All members by the default reviewer  
+- User account members by line manager, technical/service account members by the repository owner
+- User account members by line manager, all other members by the repository owner
+- User account members by themself, all other members by the repository owner
+- User account members by line manager, technical/service account members by the group owner
+- User account members by line manager, all other members by the group owner
+- User account members by themself, all other members by the group owner
+- All members by the group owner
+- All members by the repository owner
+- All members by the default reviewer
 
 When the group membership review is launch, review is available on "Access 360" section:
 
 ![](./media/IAP241.png)  
 
 Reviewers can start the group membership review. They can approve, revoke or comment one by one, they can also perform bulk operations by selecting several entries at once.  
-  
-> the behavior is the same as for Application Rights Review, but without the sign off and immediate remediation capabilities that have been introduced in IAP version 2.1.  
 
 ![](./media/IAP242.png)
 
@@ -171,12 +168,12 @@ Reviewers can start the group membership review. They can approve, revoke or com
 
 You can configure more advanced scenarios where you can select who will have to do the review depending on some factors such as risk level, account sensitivity level, last login date, ...
 In order to do this you have to enable the `advanced reviewer selection` mode.  
-  
+
 ![](./media/IAP229.png)  
-  
+
 Once done, you can define your strategy through a server side javascript.  
 This script will be executed for each individual line to review in order to find a valid reviewer. Here is an example.  
-  
+
 ![](./media/IAP230.png)
 
 ```javascript
@@ -224,13 +221,13 @@ This script will be executed for each individual line to review in order to find
 // lastloginindays
 
 if(accounttype.equals('user')) {
-    'linemanager,repositoryowner,default';
+  'linemanager,repositoryowner,default';
 }
 else {
-    if(accountsensitivitylevel>2)
-        'accountowner,repositoryowner,default';
-    else
-        'repositoryowner,default';
+  if(accountsensitivitylevel>2)
+    'accountowner,repositoryowner,default';
+  else
+    'repositoryowner,default';
 }
 ```
 
@@ -303,16 +300,15 @@ This script will be executed for each individual line to review in order to find
 // lastloginindays
 
 if(accounttype.equals('user')) {
-    'linemanager,applicationowner,default';
+  'linemanager,applicationowner,default';
 }
 else {
-    if(permissionsensitivitylevel>2)
-        'permissionowner,applicationowner,default';
-    else
-        'applicationowner,default';
+  if(permissionsensitivitylevel>2)
+    'permissionowner,applicationowner,default';
+  else
+    'applicationowner,default';
 }
 
 ```
 
 > This mode is disabled by default.  The related feature have to be enabled in your project if you want to use advanced review strategies. To do so, you have to edit the following feature file: `\webportal\features\bw_iasreview\iasreview.features`. The feature `ias_rightreviewadvandedreviewermode` for application rights reviews has to be associated to the relevant feature sets. Please contact your Identity Analytics project owner to configure this.  
-  

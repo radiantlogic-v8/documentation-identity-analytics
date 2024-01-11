@@ -5,12 +5,14 @@ description : "Identity Analytics Access Review Guide"
 
 # Introduction
 
-This document describes the basic principles of self-service compliance driven Access Review in IA (Identity Analytics) as well as the best practices to configure, follow-up a review and manage the remediations.
+This document describes the basic principles of self-service compliance driven Access Review in IA (Identity Analytics) as well as the best practices to configure and follow-up a review and manage the remediation processes.
 
 This documentation will only focus on access review configuration, for a more general introduction to RadiantOne Identity Analytics and the configuration of the solution, please refer to the full documentation, available using the following URL:
 [https://developer.radiantlogic.com](https://developer.radiantlogic.com)  
 
-> Note that with IAP version 2.1, the application access rights review comes with a new "sign off" principles and the ability to launch remediation just after a reviewer signed off and not only after the campaign is finalized. For this reason, before upgrading IAP to 2.1, it is necessary to finalize all web-based reviews.  
+> In IAP version 2.2 a new "sign off" principle has been added to the review process, as well as the the ability to launch the remediation process as soon as the reviewer signs off.  
+>
+> Due to this change in behavior it is **necessary** to finalize **all** web-based reviews **before** upgrading IAP to version 2.1 or 2.2.  
 
 ## General principles
 
@@ -32,7 +34,7 @@ The unit in charge of security is often responsible for preparing and organizing
 
 The two main types of review are:  
 
-- The 'organisational review'  
+- The 'organisational review'
 - The 'applications review'
 
 There is one other type of review that is sometimes implemented when staff entry/exit procedures are complex, *i.e.* the HR data review.
@@ -49,7 +51,7 @@ These are transverse reviews with regard to the applications (one person has acc
 
 These reviews involve asking an application manager to check that access rights are correctly configured for their application.  
 
-This exercise is usually focused on a sub-set of access accounts:
+This exercise is usually focused on a sub-set of access accounts:  
 
 1. Accounts with wider access rights
 2. Technical accounts, known as 'service accounts' that are not linked to particular individuals.
@@ -68,8 +70,8 @@ It is not unusual for these two types of review to lead to additional sub-types 
 
 There are two fundamental principles that enable the validation of access rights:  
 
-- The principle of the lowest rights: assigning only the rights that are strictly necessary to users. If a person has no particular need for a resource they should not have access to it.  
-- The principle of separation of tasks: those who originate a request should not be the same as those who carry it out and those who validate it. This is a first stage that helps avoid lots of errors and slip-ups later on.  
+- The principle of the lowest rights: assigning only the rights that are strictly necessary to users. If a person has no particular need for a resource they should not have access to it.
+- The principle of separation of tasks: those who originate a request should not be the same as those who carry it out and those who validate it. This is a first stage that helps avoid lots of errors and slip-ups later on.
 
 In practice, without a formal security policy which defines the precise roles of all those involved, the legitimacy of access rights is left to managers to decide and who alone must assess the usefulness and the risks associated with the access rights assigned.  
 

@@ -28,19 +28,19 @@ The *application technical owner* is involved in the remediation phase in order 
 This can be summarized as:
 
 ![](./media/image60.png)  
-  
+
 Once a review campaign is configured, it is immediately launched.  
 The review campaign will remain active until it is finalized by the *review owner*. A review campaign due date is part of the review campaign configuration and is displayed in the management interface.  
-  
+
 Several review campaigns can be launched at once. From a end user perspective, all entries to be reviewed are displayed in the same interface per review campaign. The end user can still filter the entries per priority level or due date to better manage his review operations.  
 
 When a reviewer has reviewed all entries, he **has to** "sign off" his review so that remediation can directly be launched automatically or manually by the *review owner* even if the full review campaign has not been finalized.  
 
 The review campaign **must** be finalized by the *review owner* thanks to the *Management Interface*. When a review campaign is finalized, all entries are marked with a review status:  
-  
-- ok  
-- revoke  
-- not reviewed  
+
+- ok
+- revoke
+- not reviewed
 
 Once finalized, a compliance report is generated and all revoked entries are marked as to be remediated.  
 The remediation is active immediately after a reviewer has "signed off" his review for his entries or for all entries of the review campaign when it is finalized by the *review owner*.  
@@ -50,11 +50,10 @@ Embedded remediation follows a simple ITSM change management process:
 
 ![](./media/image46.png)
 
-Each entry will be tracked individually. The *application technical owner* is responsible for the remediation.  
-Entries to remediate are displayed in his user interface.
+Each entry will be tracked individually. The *application technical owner* is responsible for the remediation. Entries to remediate are displayed in his user interface.
 
 Once an entry has been marked as *successfully remediated*, it will automatically be part of the control plan:
-When a new Timeslot will be loaded, those remediation will be checked against the entitlement catalog in order to detect any discrepancy:
+When a new timeslot will be loaded, those remediation will be checked against the entitlement catalog in order to detect any discrepancy:
 An access right still presents although it has been marked as *successfully remediated*. The list is available through the *Remediation Management* interface.
 
 ## Campaign configuration
@@ -68,40 +67,40 @@ The best practice is to *tag* those accounts/permissions and to specify those ta
 Remember that the reviewer is either a **direct line manager** a **resource owner** or the **user himself**.  
 Each "user account" will be reviewed by the account owner direct line manager.  
 All the other accounts (technical accounts, orphan accounts, ...) will be reviewed by the resource owner.  
-  
+
 This is computed during the review campaign configuration.  
 In order for a review campaign to be valid, **all** entries must have a reviewer assigned to them. If it is not the case, an error message is displayed in the *Preview data* panel which prevents you from launching the review campaign.  
-  
+
 You can refine the reviewers by browsing and updating the entitlement catalog management information.  
 A line manager is configured through the *identity detail* page.  
-  
+
 ![](./media/image61.png)  
-  
+
 An *application business owner* or *application reviewer owner* is configured through the *application detail* page.  
-  
+
 ![](./media/image62.png)  
-  
+
 You can also configure a *default reviewer* in the review campaign configuration page.  
-  
+
 Keep in mind that a manager is considered valid only if:  
-  
-- He is still *active* (departure date < current date)  
-- He has a *valid* email address  
-  
+
+- He is still *active* (departure date < current date)
+- He has a *valid* email address
+
 RadiantOne Identity Analytics is enforcing the **RACI principles**, as a result each reviewer identified during the configuration phase is considered **accountable** for reviewing its entries.  
-  
+
 There is **only one accountable reviewer per entry**. If several application owners are configured, Identity Analytics will pick the most important one (most probably the one who is not marked as a delegated manager) starting first with the *application reviewer owner*, then the *application business owner*. If several managers have the same priority ranking, RadiantOne Identity Analytics will pick one amongst the list.  
-  
+
 Regarding direct line managers, as a best practice you **should not have** several direct line managers assigned to an identity. If it is the case, RadiantOne Identity Analytics will pick one amongst the list.  
 
 As you will see in the next chapters, the **accountable reviewer** can still reassign entries to his peers, they will then be considered as **responsible** for reviewing their entries *on behalf of* the accountable reviewer.  
 
 Once the configuration is done, you can launch the review. It will be launched automatically, it means that the entries to be reviewed will appear in the reviewers home page.  
-  
+
 > Once the review campaign is launched, the reviewers are definitely assigned to their entries, it means that if you refresh your data afterwards and some management information change, it won't have any effect on the reviewers, they will still have to review their assigned entries.  
 
 ## End User Functionalities  
-  
+
 Entries to review are accessible through the end user interface.  
 As long as entries still need to be reviewed, *Entries to review* are displayed in the **first** panel "Access 360".  
 
@@ -109,13 +108,13 @@ As long as entries still need to be reviewed, *Entries to review* are displayed 
 
 You can either review entries one by one or through bulk operations by selecting several entries and clicking on *bulk approval*, *bulk revocation* in the contextual menu.  
 You can reorder the table, and filter the entries either by selecting a given account/identity/permission/application or with the free text filter.  
-  
+
 A contextual menu accessible with a right click on the table helps you to:  
 
-- export the table content in CSV/Excel format  
-- reorder columns  
-- add/remove columns  
-- select/unselect the displayed entries at once  
+- export the table content in CSV/Excel format
+- reorder columns
+- add/remove columns
+- select/unselect the displayed entries at once
 
 > Table configuration is *persistent*, it means that if you reorder/add/remove columns this will be *saved* in your personal settings. If you want to roll back to the default configuration you need to *Reset configuration* through the Table contextual menu.  
 
@@ -132,60 +131,60 @@ In order to do so, you have to chose *Display all reviewed entries* as soon as y
 You can reassign entries to your peers through the contextual menu. In order to do so, you have to select the entries you want to reassign and pick *Ask for help to*. The "ask for help to" button is active if in the review campaign configuration you have selected the option "Enable Self delegation" at step *4. Launch Review*.  
 
 ![](./media/IAP193.png)  
-  
+
 ![](./media/IAP165.png)  
-  
+
 Please consult the [Reassigning entries](#reassigning-entries) chapter for more information about reassigning entries.  
-  
+
 Finally, you can declare that you are not the reviewer for some entries. In order to do so, you have to select the entries you want to reassign and pick *I am not the reviewer*.  
 Those entries will be removed from your list, the *review owner* will be able to identify those entries through the management interface (as their review status will be "to reassign") and reassign them as needed to another person.  
-  
+
 ![](./media/image107.png)  
-  
+
 ## Management Interface functionalities  
-  
+
 The management interface helps you to manage ongoing review campaign and to browse through finalized review campaigns.  
-  
+
 ![](./media/IAP153.png)  
-  
+
 The following actions are allowed on an ongoing review campaign:  
-  
-- Send notification to the reviewers, button *Send a message*  
-- Pause / resume a review campaign, button *Pause*  
+
+- Send notification to the reviewers, button *Send a message*
+- Pause / resume a review campaign, button *Pause*
 - Import review status from an excel spreadsheet, button *Upload*  
 - Finalize the review campaign, button *Finalize*  
-  
+
 The following actions are allowed once a review campaign is finalized:  
-  
-- Download the compliance report, button *Compliance Report*  
+
+- Download the compliance report, button *Compliance Report*
 - Delete the review campaign, button *Delete*  
-  
+
 You can also browse inside a review campaign to access its details (button *Details* or click on the review name) and display a planning of all the review campaigns (button *Planning*).  
-  
+
 > Deleting a review campaign will remove **all** information associated with this review campaign, including review information and remediation information. This cannot be undone. You should use this with caution.  However the compliance report will still be available in the database and can be downloaded by the administrator.  
-  
+
 ### Campaign detail page  
-  
+
 The review campaign detail page gives you a real-time view of your review campaign progress.  
 Through this page you can access to a series of KPIs  
 
-- review perimeter  
-- Nb of applications to review  
-- Nb of reviewers  
-- Reviewed entries so far  
-- Entries left to be reviewed  
-- Nb of actions requested so far  
-- Statistics around the nb of entries to review per reviewer (percentile, min, max, ...)  
-- Completion Rate  
-- Decision Summary  
-- Review Campaign Activity  
-- Backlog  
-- ...  
-  
+- review perimeter
+- Nb of applications to review
+- Nb of reviewers
+- Reviewed entries so far
+- Entries left to be reviewed
+- Nb of actions requested so far
+- Statistics around the nb of entries to review per reviewer (percentile, min, max, ...)
+- Completion Rate
+- Decision Summary
+- Review Campaign Activity
+- Backlog
+- ...
+
 ![](./media/IAP161.png)  
-  
+
 ![](./media/IAP162.png)  
-  
+
 You can also access to a real time view of the entries being reviewed in the tab *Entries to review* with filtering/grouping/export capabilities and identity/permission context as well as a real time view of the actions identified so far with filtering/grouping/export capabilities and identity/permission context.  
 
 As a *review owner*, as long as the review campaign is not finalized, you can perform bulk review operations, reset current review status (status, comment and reassignment) and reassign review entries.  
@@ -199,10 +198,17 @@ As a *review owner*, as long as the review campaign is not finalized, you can pe
 Once the entries have been signed off by the *reviewer* or once the sign off have been forced by the *review owner*, the related entries are displayed in the tab "Entries sign off".  
   
 ![](./media/IAP164.png)  
+
 Those entries are considered ready for remediation even if the review campaign has not been finalized by the *review owner*.  
-When entries are in that particular state, it means that the *reviewer* cannot change his decision anymore. These entries are ready to be remediated. The remediation can be launched automatically based on the script that is executed daily and manually by the *review owner*.By selecting entries and clicking on "Proceed Now", the "signed off" entries will be immediately set in "pending remediation" state.By selecting entries and clicking on "Force Bulk Reset", the entries will once again be available to the *reviewer* so that he can change his decisions.> The "proceed now" option is also hidden by default. To make it available, it requires to set the `ias_reviewcanproceedsignedentries` variable to true.  
-  
-> To automate the change from "signed off" to "pending remediation", the variable `ias_reviewautomateproceedsignedentries` and `ias_reviewproceedsignedentriesdelay` have to be set to in the configuration of the project. When `ias_reviewautomateproceedsignedentries` is set to "true" and `ias_reviewproceedsignedentriesdelay` is set to a number of days, the entries will automatically go from a "Signed-off" state to a "Proceed: Remediation Pending" state after the number of days indicated. The remediation will then have to be launched and managed through the "Remediation Management" page. To allow this automation, the related workflow (`bwaccess360_automateProceedSignofAccessRights`) needs to be launch using a batch.  
+When entries are in that particular state, it means that the *reviewer* cannot change his decision anymore. These entries are ready to be remediated. The remediation can be launched automatically based on the script that is executed daily and manually by the *review owner*.  
+
+By selecting entries and clicking on "Proceed Now", the "signed off" entries will be immediately set in "pending remediation" state.  
+By selecting entries and clicking on "Force Bulk Reset", the entries will once again be available to the *reviewer* so that he can change his decisions.  
+
+> The "proceed now" option is also hidden by default. To make it available, it requires to set the `ias_reviewcanproceedsignedentries` variable to `true`.  
+
+> To automate the change from "signed off" to "pending remediation", the variable `ias_reviewautomateproceedsignedentries` and `ias_reviewproceedsignedentriesdelay` have to be set to in the configuration of the project. When `ias_reviewautomateproceedsignedentries` is set to `true` and `ias_reviewproceedsignedentriesdelay` is set to a number of days, the entries will automatically go from a "Signed-off" state to a "Proceed: Remediation Pending" state after the number of days indicated. The remediation will then have to be launched and managed through the "Remediation Management" page. To allow this automation, the related workflow (`bwaccess360_automateProceedSignofAccessRights`) needs to be launch using a batch.  
+
 The last tab *Actions Requested* gives you a view of the remediation decision taken so far, keep in mind that a *reviewer* can still change is mind until he sign off his review or until the review campaign is finalized by the *review owner*. As a result, those decisions are temporary and are not considered as actionable remediations until the *sign off*.
 
 ![](./media/IAP195.png)
@@ -245,10 +251,10 @@ To do so, access the *Remediation Strategy Management* page under *Settings/syst
 
 In this page, you can:  
 
-- Declare third party ITSMs for remediation  
-- Declare third party RPA for remediation  
-- Assign a remediation strategy for each individual repository  
-- Assign a remediation strategy for each individual application  
+- Declare third party ITSMs for remediation
+- Declare third party RPA for remediation
+- Assign a remediation strategy for each individual repository
+- Assign a remediation strategy for each individual application
 
 #### Declaring a new third party ITSM or RPA
 
@@ -293,10 +299,12 @@ By default, if no remediation strategy is assigned, an *embedded* remediation st
 Once a review is finalized, or entries have been signed off and proceeded, remediations are automatically created based on the target systems review strategies.  
 
 These remediations are assigned special state called *pending* (corresponding to an *init* status). These remediations are visible in the remediation interface but are not launched yet. This gives you a final chance to review what changes will be done in the target system.  
-> To automate the change from "signed off" to "pending remediation", the variable `ias_reviewautomateproceedsignedentries` and `ias_reviewproceedsignedentriesdelay` have to be set to in the configuration of the project. When `ias_reviewautomateproceedsignedentries` is set to "true" and `ias_reviewproceedsignedentriesdelay` is set to a number of days, the entries will automatically go from a "Signed-off" state to a "Proceed: Remediation Pending" state after the number of days indicated. The remediation will then have to be launched and managed through the "Remediation Management" page. To allow this automation, the related workflow (`bwaccess360_automateProceedSignofAccessRights`) needs to be launch using a batch.
-  
+
+> To automate the change from "signed off" to "pending remediation", the variable `ias_reviewautomateproceedsignedentries` and `ias_reviewproceedsignedentriesdelay` have to be set to in the configuration of the project. When `ias_reviewautomateproceedsignedentries` is set to `true` and `ias_reviewproceedsignedentriesdelay` is set to a number of days, the entries will automatically go from a "Signed-off" state to a "Proceed: Remediation Pending" state after the number of days indicated. The remediation will then have to be launched and managed through the "Remediation Management" page. To allow this automation, the related workflow (`bwaccess360_automateProceedSignofAccessRights`) needs to be launch using a batch.  
+
+
 This is the case for **any kind** of remediation, regardless of the remediation strategy.  
-  
+
 ![](./media/IAP224.png)  
 
 You can manually mark those remediations if needed (done / won't fix).  
@@ -306,9 +314,9 @@ Once you are satisfied with the list of remediation actions to be performed, you
 Note that for ITSM scenario, RadiantOne Identity Analytics adopts a consolidation strategy: the product will consolidate all requested changes for each target system and will create a single ticket per target system. This allows to avoid situations where after the execution of an access review campaign thousand of tickets are automatically created in the ITSM.  
 
 All requested changes are presented as an attachment to the ticket.  
-  
+
 RadiantOne Identity Analytics will retrieve the ITSM ticket number as well as its current status.  
-  
+
 ![](./media/IAP225.png)  
 
 ![](./media/IAP226.png)  
@@ -342,19 +350,19 @@ Notification are sent to the current *responsible* reviewers (consult [Reassigni
 ![](./media/image77.png)  
 
 The *Mail strategy* will help you to handle all typical use cases:  
-  
-- initial notification  
-- gentle reminder  
-- offline review  
-  
+
+- initial notification
+- gentle reminder
+- offline review
+
 You can personalize both the mail title and mail content.  
-  
+
 Some dynamic variables are available for your convenience:  
-  
-- reviewer employee number as a String: `{dataset.hrcode.get()}`  
-- reviewer fullname as a String: `{dataset.fullname.get()}`  
-- reviewer email address as a String: `{dataset.mail.get()}`  
-- reviewer direct line manager employee number as a String: `{dataset.linemanagerhrcode.get()}`  
+
+- reviewer employee number as a String: `{dataset.hrcode.get()}`
+- reviewer fullname as a String: `{dataset.fullname.get()}`
+- reviewer email address as a String: `{dataset.mail.get()}`
+- reviewer direct line manager employee number as a String: `{dataset.linemanagerhrcode.get()}`
 - reviewer direct line manager fullname as a String: `{dataset.linemanagerfullname.get()}`
 - reviewer direct line manager email address as a String: `{dataset.linemanagermail.get()}`
 - review campaign title as a String: `{param.campaignname.get()}`
@@ -406,8 +414,8 @@ You can activate this feature through the review campaign configuration
 
 In order for a previous status to be considered valid, it must both:  
 
-- have been validated in the configured window timeframe (reviewed in the last X days)
-- in case of user account, does not have any account owner characteristics changed as compared when it has been reviewed (organisation, job title, internal status)  
+- have been validated in the configured window time frame (reviewed in the last X days)
+- in case of user account, does not have any account owner characteristics changed as compared when it has been reviewed (organisation, job title, internal status)
 
 By default, those entries are considered reviewed and won't appear in the end user review page **unless** they configure their interface to display **all** entries currently being reviewed.  
 
@@ -428,7 +436,7 @@ You can only import excel spreadsheet on *ongoing* review campaigns.
 
 Each entry to review has a reviewer. RACI principles, as a result each entry has both a **R**esponsible and an **A**ccountable.  
 Only the **R**esponsible reviews the entries. By default, when a review campaign is initialized, both fields contain the same value: The reviewer computed during the initialization phase.  
-  
+
 One can reassign entries to another individual. As RACI principles are enforced, only the **R**esponsible information is updated.  
 At the end of the review, it means that you can identify which entries have been reassigned by comparing those two fields. It is visible in the management interface:  
 
@@ -445,7 +453,7 @@ At the end of the review, when the review campaign is finalized the compliance r
 A reviewer can also reassign entries through the review interface. This self-service reassignment is limited as such:
 
 - An entry to review as a line manager can only be reassigned to a team member
-- An entry to review as an application owner can only be reassigned to the others *application business owners*  
+- An entry to review as an application owner can only be reassigned to the others *application business owners*
 - One cannot review himself
 - An entry to review as the *default reviewer* cannot be reassigned
 - When you reassign several entries at once, the reassignment rule **must** be consistent (you cannot reassign in a single click entries to review as a line manager and entries to review as an application owner)
@@ -475,9 +483,9 @@ You can end up in a situation where some changes will occur within your initial 
 RadiantOne Identity Analytics considers the initial review perimeter (the one displayed during the review campaign launch) as the one to be reviewed.  
 As a result, RadiantOne Identity Analytics access certification will automatically adapt its content based on those changes with the following rules:  
 
-- if an account or a permission is deleted, the access right no longer need to be reviewed, it is automatically marked as revoked  
-- if a right/account is disabled, the access right still needs to be reviewed  
-- if a reviewer (responsible) is removed, the corresponding line will appear in red in the management interface  
+- if an account or a permission is deleted, the access right no longer need to be reviewed, it is automatically marked as revoked
+- if a right/account is disabled, the access right still needs to be reviewed
+- if a reviewer (responsible) is removed, the corresponding line will appear in red in the management interface
 
 At the end of the review, it also means that the management interface (review and remediation) lines corresponding to deleted objects (accounts / permissions) won't appear anymore.  
 
