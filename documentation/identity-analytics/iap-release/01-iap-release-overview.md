@@ -9,19 +9,15 @@ description : "Identity Analytics Release Notes"
 
 IAP leverages improvements applied to the IGRC product. Please refer to the following table for more information :
 
-|                | IAP 1.0 | IAP 1.1 | IAP 1.2 | IAP 1.3 -- 1.7 | IAP 1.8 | IAP 2.0 |
-| :------------- | :-----: | :-----: | :-----: | :------------: | :-----: | :-----: |
-| Braille R1     |  **X**  |    -    |    -    |       -        |    -    |    -    |
-| Braille R1 SP1 |  **X**  |  **X**  |    -    |       -        |    -    |    -    |
-| Braille R1 SP2 |  **X**  |  **X**  |    -    |       -        |    -    |    -    |
-| Braille R1 SP3 |  **X**  |  **X**  |    -    |       -        |    -    |    -    |
-| Curie R1       |  **X**  |  **X**  |  **X**  |       -        |    -    |    -    |
-| Curie R2       |    -    |    -    |    -    |     **X**      |    -    |    -    |
-| Curie R2 SP1   |    -    |    -    |    -    |     **X**      |    -    |    -    |
-| Curie R3       |    -    |    -    |    -    |     **X**      |    -    |    -    |
-| Curie R3 SP4   |    -    |    -    |    -    |       -        |  **X**  |    -    |
-| Descartes R1   |    -    |    -    |    -    |       -        |  **X**  |    -    |
-| Descartes R2   |    -    |    -    |    -    |       -        |  **X**  |  **X**  |
+|              | IAP 1.0 -- 1.2 | IAP 1.3 -- 1.7 | IAP 1.8 | IAP 2.0 |
+| :----------- | :------------: | :------------: | :-----: | :-----: |
+| Curie R1     |     **X**      |       -        |    -    |    -    |
+| Curie R2     |       -        |     **X**      |    -    |    -    |
+| Curie R2 SP1 |       -        |     **X**      |    -    |    -    |
+| Curie R3     |       -        |     **X**      |    -    |    -    |
+| Curie R3 SP4 |       -        |       -        |  **X**  |    -    |
+| Descartes R1 |       -        |       -        |  **X**  |    -    |
+| Descartes R2 |       -        |       -        |  **X**  |  **X**  |
 
 ## IAP release content
 

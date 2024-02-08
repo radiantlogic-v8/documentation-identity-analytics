@@ -7,122 +7,120 @@ description: "Identity Analytics 2.x Release Notes"
 
 ## IAP 2.0
 
-```
-BWIPUAR-1505: [PAM] PAM Booster roles-features-menuitem integration in IAP
-BWIPUAR-1551: accounts review - offline: the downloaded file is empty
-BWIPUAR-1571: missing views in SOD pages
-BWIPUAR-1579: Reviews - If NO Default reviewer is specified, the preview review data returns 0 records
-BWIPUAR-1598: PamPGM and PamCiso roles allows to see all Entities in Search
-BWIPUAR-1617: Analysis: identify technical workflows in IAP to improve delegation
-BWIPUAR-1095: Shared dashboard to managers are not shared
-BWIPUAR-1320: ACC38 is not included in Execution Plan
-BWIPUAR-1501: Mails to delegates might not been sent
-BWIPUAR-1519: Refactor IAP detail dialog box to allow for dialog box overriding
-BWIPUAR-1524: [REVIEW] Add "advanced" reviewer mode for account based review
-BWIPUAR-1533: Issue while creating and updating global roles
-BWIPUAR-1569: Right Review: Downloaded file doesn't contain already reviewed entries status
-BWIPUAR-1610: Control Browser: Execute control button is not working anymore
-BWIPUAR-1623: Send notifications to delegatees in iap reviews
-BWIPUAR-1657: At the end of the creation of global role, the list of people in role is empty and also the criteria for identities column.
-BWIPUAR-1658: When you edit a global role, at the end of the modification (click on finish), this one is deleted (no more in the list of global roles)
-BWIPUAR-1684: Delete "Download Compliance Report" for Role Mining Campaigns
-BWIPUAR-1713: Display bug in crosstab format. The last line is not displayed by default. Need a refresh
-BWIPUAR-1715: Total percentage in progress bar can exceed 100%
-BWIPUAR-1716: updating entries with filtering is ambiguous
-BWIPUAR-1582: Review - Allow to display (without vertical scrollbar) the complete list of managers when we have BO, TO et Reviewer managers
-BWIPUAR-1613: In the search application, the "Which tag" search appears twice in the list
-BWIPUAR-1685: Documentation: Replace Brainwave reference to Radiant one
-BWIPUAR-1695: The previously used review comment applied is selected by default in the combo box
-BWIPUAR-1730: Problem displaying "/" character for "Job/Organization"
-BWIPUAR-909: Add the possibility to perform offline reviews for account repositories
-BWIPUAR-1092: Repository Controls dashboard - "Active accounts history" graph is incorrect
-BWIPUAR-1217: As a campaign owner I want to configure a campaign with ad-hoc reviewers strategies
-BWIPUAR-1235: Adding a control in the Control Browser is not visible without reloading the page or closing/opening the Control Browser. The refresh is not sufficient.
-BWIPUAR-1239: Ambiguous controls (REV)
-BWIPUAR-1240: Provide a unified UI for access review from a end user perspective
-BWIPUAR-1244: Update integration guide with new controls names/descriptions
-BWIPUAR-1280: [REVIEW] Set owners as "Reviewer"
-BWIPUAR-1301: [REVIEW] Access360 - Reviewer Pending Review List
-BWIPUAR-1429: Identities belonging to several organisations are always displayed as New in reports
-BWIPUAR-1450: [REVIEW] Access360 - Reviewer Pending Custom Review List (based on Workflow engine)
-BWIPUAR-1451: [REVIEW] Access360 - Reviewer UI - Analytics - List of Reviewed Entries
-BWIPUAR-1489: Delete bw_cloud_roleminig folder from reconciliation folder
-BWIPUAR-1503: HR11 does not filter on internal identities
-BWIPUAR-1504: [PAM] PAM Booster collect integration in IAP
-BWIPUAR-1507: [PAM] PAM Booster search, details and dialog pages for Vault, Safes, Credentials, CyberArk Users
-BWIPUAR-1508: [PAM] PAM Booster analytics dashboards integration in IAP
-BWIPUAR-1509: [PAM] PAM Booster safe analytics reports integration in IAP
-BWIPUAR-1510: [PAM] PAM Booster home page integration in IAP
-BWIPUAR-1516: [REVIEW] Access360 - Reviewer Offline Mode
-BWIPUAR-1517: [PAM] Safe User Access Review 
-BWIPUAR-1521: [PAM] PAM Booster Safe Owner Report Subscription in IAP
-BWIPUAR-1522: [REVIEW] Add a button to manage escalation for the campaign owner
-BWIPUAR-1525: [REVIEW] In advanced review mode, add some custom attributes to ease the decision making
-BWIPUAR-1528: PAM Booster Integration in IAP
-BWIPUAR-1530: My Access 360 - The tooltip for "Reviews" tab should be "Actives reviews" and not "Entries to be reviewed"
-BWIPUAR-1531: In "my 360 Access", layout problems if several reviews in progress
-BWIPUAR-1532: Download and upload buttons are not displayed in my offline review
-BWIPUAR-1535: [REVIEW] Grouped list review does not highlight grouped grouped lines anymore
-BWIPUAR-1539: Change BrainwaveGRC logo to BrainwaveGRCRadiantLogic logo
-BWIPUAR-1543: RM - display issue when there are no selected role in review (detail panel)
-BWIPUAR-1547: PAM Booster Documentation
-BWIPUAR-1548: PAM Booster CyberArk Data Extraction and Collect Add-On
-BWIPUAR-1549: PAM Booster Control Browser
-BWIPUAR-1550: PAM Booster Technical Admin Interface
-BWIPUAR-1554: Export/import of global roles is broken
-BWIPUAR-1557: PAM Booster Bug in Mashup Dashboard Sharing
-BWIPUAR-1561: Refine default account reconciliation rules
-BWIPUAR-1562: In Role Mining Admin, hide ticket panel if no role tickets are found
-BWIPUAR-1566: Role Mining: Import Role dialog inconsistency
-BWIPUAR-1568: Restrict capabilities based on new Product Lines Observability, Governance, Compliance
-BWIPUAR-1570: PAM Booster LDAP Data Extraction and Collect Add-On
-BWIPUAR-1572: Applications in common identity search analytics
-BWIPUAR-1575: PAM: Add new features link to the new license in all PAM Booster components
-BWIPUAR-1578: [REVIEW] Set owners as "Reviewer" for Safe Access Review
-BWIPUAR-1580: Reviews - The filter on the preview review data is not working properly
-BWIPUAR-1581: Reviews - For Accounts or apps reviews, the list box allowing to filter on the reviewer is incomplete.
-BWIPUAR-1583: Cannot edit tags on ActiveDirectory repository details page
-BWIPUAR-1584: Disable links in Accounts Review Management page
-BWIPUAR-1585: Enable links In Account Review management page
-BWIPUAR-1599: Managed Resources tab does not display the correct expertise domain list normally existing 
-BWIPUAR-1604: From the control results for safes type filter, from the "impact" tab (in the detail of number of discrepancies), the "application name" refers to a Safe. Type mismatch 
-BWIPUAR-1608: Role Mining - UI - Summary of the Role Mining by Organisation - Missing or excessive information.
-BWIPUAR-1611: Control Browser: When we click on "Add control" button, we have "No new control available" (Probably in the continuity of BWIPUAR-1610)
-BWIPUAR-1612: In "Safe Right Review Compliance Status", the filter by safe tag doesn't work
-BWIPUAR-1614: "Administration Home Page". Click on "R&D" in "Top   most risky organisations" causes an error in the portal log (and so no results in the portal)
-BWIPUAR-1616: Access360 - Account detail - Groups tab -> The message "Account does not have groups" is incorrect (it's just due to a bad initialisation of the listbox). 
-BWIPUAR-1620: A description is missing for this report "Managed shares access rights analysis"
-BWIPUAR-1621: "Managed Resources" tab (My 360Â° Access) does not contain managed safes resources
-BWIPUAR-1626: RM: Global Roles Management - "People in Role" empty after new timeslot
-BWIPUAR-1634: For Safes search, there is no possibility to search by tag
-BWIPUAR-1638: Change Brainwave to Radiant Logic in IAP
-BWIPUAR-1644: PAM activate controls and metadata and fill the expression with the related license and config variable
-BWIPUAR-1646: [REVIEW] New REACT Reviewer Interface for Application Rights
-BWIPUAR-1648: [REVIEW] New REACT Reviewer Interface for Repository Accounts
-BWIPUAR-1649: [REVIEW] New REACT Reviewer Interface for CyberArk Safe Permissions
-BWIPUAR-1650: [REVIEW] Update UAR documentation with new Access360 and Review interfaces 
-BWIPUAR-1652: [REVIEW] Orphaned Accounts selection does'nt work when "Grouped by Identity"
-BWIPUAR-1653: [REVIEW] Missing column in reviewer table "Service Account"
-BWIPUAR-1654: [REVIEW] Display bug of the progress bar when one of the "approve" or "revoke" kpi is null
-BWIPUAR-1656: Re-enable links in Accounts Review Management page
-BWIPUAR-1659: [REVIEW] Update NLS in french for new review UI
-BWIPUAR-1663: Sort and Filter
-BWIPUAR-1664: Allow to freeze columns in the review tables
-BWIPUAR-1665: [REVIEW] UI fix colors for risk score
-BWIPUAR-1666: [REVIEW] missing tabs in the Identity dialog box
-BWIPUAR-1667: [REVIEW] Bug in the refresh of the page and when sorted entries on status column
-BWIPUAR-1669: Role Mining - activate metadata and fill the expression with the related license and config variable
-BWIPUAR-1670: [REVIEW] Ability to add comment for all entries whatever their status
-BWIPUAR-1672: We can't set a comment on a selected login if this one wat not yet reviewed. Nevertheless, we can do a bulk comment on several login not yet reviewed
-BWIPUAR-1679: Crosstab Export XLSX" does not work when there is only one column dimension
-BWIPUAR-1681: Change Brainwave Logo in Reports
-BWIPUAR-1683: Review page:  final congratulations message is missing when all entries are reviewed
-BWIPUAR-1706: Table advanced filter optimization
-BWIPUAR-1710: Display the number of entries for license check
-BWIPUAR-1714: The completion percentage is superior to 100% 
-BWIPUAR-1720: IAP 2.0 - Update the "Revision history" in the descriptions (EN & FR)
-BWIPUAR-1727: When you switch in crosstab view, the horizontal scrollbar is missing
-BWIPUAR-1729: Add links to resources in crosstab reviews...
-BWIPUAR-1731: Patch the .gitignore file in the pipeline to comment out the line related to js_app
-BWIPUAR-1538: Campainid parameter is missing in view bwaccess360_applicationaccessrightscampaignname
-```
+- **BWIPUAR-1505**: [PAM] PAM Booster roles-features-menuitem integration in IAP
+- **BWIPUAR-1551**: accounts review - offline: the downloaded file is empty
+- **BWIPUAR-1571**: missing views in SOD pages
+- **BWIPUAR-1579**: Reviews - If NO Default reviewer is specified, the preview review data returns 0 records
+- **BWIPUAR-1598**: PamPGM and PamCiso roles allows to see all Entities in Search
+- **BWIPUAR-1617**: Analysis: identify technical workflows in IAP to improve delegation
+- **BWIPUAR-1095**: Shared dashboard to managers are not shared
+- **BWIPUAR-1320**: ACC38 is not included in Execution Plan
+- **BWIPUAR-1501**: Mails to delegates might not been sent
+- **BWIPUAR-1519**: Refactor IAP detail dialog box to allow for dialog box overriding
+- **BWIPUAR-1524**: [REVIEW] Add "advanced" reviewer mode for account based review
+- **BWIPUAR-1533**: Issue while creating and updating global roles
+- **BWIPUAR-1569**: Right Review: Downloaded file doesn't contain already reviewed entries status
+- **BWIPUAR-1610**: Control Browser: Execute control button is not working anymore
+- **BWIPUAR-1623**: Send notifications to delegatees in iap reviews
+- **BWIPUAR-1657**: At the end of the creation of global role, the list of people in role is empty and also the criteria for identities column.
+- **BWIPUAR-1658**: When you edit a global role, at the end of the modification (click on finish), this one is deleted (no more in the list of global roles)
+- **BWIPUAR-1684**: Delete "Download Compliance Report" for Role Mining Campaigns
+- **BWIPUAR-1713**: Display bug in crosstab format. The last line is not displayed by default. Need a refresh
+- **BWIPUAR-1715**: Total percentage in progress bar can exceed 100%
+- **BWIPUAR-1716**: updating entries with filtering is ambiguous
+- **BWIPUAR-1582**: Review - Allow to display (without vertical scrollbar) the complete list of managers when we have BO, TO et Reviewer managers
+- **BWIPUAR-1613**: In the search application, the "Which tag" search appears twice in the list
+- **BWIPUAR-1685**: Documentation: Replace Brainwave reference to Radiant one
+- **BWIPUAR-1695**: The previously used review comment applied is selected by default in the combo box
+- **BWIPUAR-1730**: Problem displaying "/" character for "Job/Organization"
+- **BWIPUAR-909**: Add the possibility to perform offline reviews for account repositories
+- **BWIPUAR-1092**: Repository Controls dashboard - "Active accounts history" graph is incorrect
+- **BWIPUAR-1217**: As a campaign owner I want to configure a campaign with ad-hoc reviewers strategies
+- **BWIPUAR-1235**: Adding a control in the Control Browser is not visible without reloading the page or closing/opening the Control Browser. The refresh is not sufficient.
+- **BWIPUAR-1239**: Ambiguous controls (REV)
+- **BWIPUAR-1240**: Provide a unified UI for access review from a end user perspective
+- **BWIPUAR-1244**: Update integration guide with new controls names/descriptions
+- **BWIPUAR-1280**: [REVIEW] Set owners as "Reviewer"
+- **BWIPUAR-1301**: [REVIEW] Access360 - Reviewer Pending Review List
+- **BWIPUAR-1429**: Identities belonging to several organisations are always displayed as New in reports
+- **BWIPUAR-1450**: [REVIEW] Access360 - Reviewer Pending Custom Review List (based on Workflow engine)
+- **BWIPUAR-1451**: [REVIEW] Access360 - Reviewer UI - Analytics - List of Reviewed Entries
+- **BWIPUAR-1489**: Delete `bw_cloud_roleminig` folder from reconciliation folder
+- **BWIPUAR-1503**: HR11 does not filter on internal identities
+- **BWIPUAR-1504**: [PAM] PAM Booster collect integration in IAP
+- **BWIPUAR-1507**: [PAM] PAM Booster search, details and dialog pages for Vault, Safes, Credentials, CyberArk Users
+- **BWIPUAR-1508**: [PAM] PAM Booster analytics dashboards integration in IAP
+- **BWIPUAR-1509**: [PAM] PAM Booster safe analytics reports integration in IAP
+- **BWIPUAR-1510**: [PAM] PAM Booster home page integration in IAP
+- **BWIPUAR-1516**: [REVIEW] Access360 - Reviewer Offline Mode
+- **BWIPUAR-1517**: [PAM] Safe User Access Review
+- **BWIPUAR-1521**: [PAM] PAM Booster Safe Owner Report Subscription in IAP
+- **BWIPUAR-1522**: [REVIEW] Add a button to manage escalation for the campaign owner
+- **BWIPUAR-1525**: [REVIEW] In advanced review mode, add some custom attributes to ease the decision making
+- **BWIPUAR-1528**: PAM Booster Integration in IAP
+- **BWIPUAR-1530**: My Access 360 - The tooltip for "Reviews" tab should be "Actives reviews" and not "Entries to be reviewed"
+- **BWIPUAR-1531**: In "my 360 Access", layout problems if several reviews in progress
+- **BWIPUAR-1532**: Download and upload buttons are not displayed in my offline review
+- **BWIPUAR-1535**: [REVIEW] Grouped list review does not highlight grouped grouped lines anymore
+- **BWIPUAR-1539**: Change BrainwaveGRC logo to BrainwaveGRCRadiantLogic logo
+- **BWIPUAR-1543**: RM - display issue when there are no selected role in review (detail panel)
+- **BWIPUAR-1547**: PAM Booster Documentation
+- **BWIPUAR-1548**: PAM Booster CyberArk Data Extraction and Collect Add-On
+- **BWIPUAR-1549**: PAM Booster Control Browser
+- **BWIPUAR-1550**: PAM Booster Technical Admin Interface
+- **BWIPUAR-1554**: Export/import of global roles is broken
+- **BWIPUAR-1557**: PAM Booster Bug in Mashup Dashboard Sharing
+- **BWIPUAR-1561**: Refine default account reconciliation rules
+- **BWIPUAR-1562**: In Role Mining Admin, hide ticket panel if no role tickets are found
+- **BWIPUAR-1566**: Role Mining: Import Role dialog inconsistency
+- **BWIPUAR-1568**: Restrict capabilities based on new Product Lines Observability, Governance, Compliance
+- **BWIPUAR-1570**: PAM Booster LDAP Data Extraction and Collect Add-On
+- **BWIPUAR-1572**: Applications in common identity search analytics
+- **BWIPUAR-1575**: PAM: Add new features link to the new license in all PAM Booster components
+- **BWIPUAR-1578**: [REVIEW] Set owners as "Reviewer" for Safe Access Review
+- **BWIPUAR-1580**: Reviews - The filter on the preview review data is not working properly
+- **BWIPUAR-1581**: Reviews - For Accounts or apps reviews, the list box allowing to filter on the reviewer is incomplete.
+- **BWIPUAR-1583**: Cannot edit tags on ActiveDirectory repository details page
+- **BWIPUAR-1584**: Disable links in Accounts Review Management page
+- **BWIPUAR-1585**: Enable links In Account Review management page
+- **BWIPUAR-1599**: Managed Resources tab does not display the correct expertise domain list normally existing
+- **BWIPUAR-1604**: From the control results for safes type filter, from the "impact" tab (in the detail of number of discrepancies), the "application name" refers to a Safe. Type mismatch
+- **BWIPUAR-1608**: Role Mining - UI - Summary of the Role Mining by Organisation - Missing or excessive information.
+- **BWIPUAR-1611**: Control Browser: When we click on "Add control" button, we have "No new control available" (Probably in the continuity of **BWIPUAR-1610**)
+- **BWIPUAR-1612**: In "Safe Right Review Compliance Status", the filter by safe tag doesn't work
+- **BWIPUAR-1614**: "Administration Home Page". Click on "R&D" in "Top most risky organisations" causes an error in the portal log (and so no results in the portal)
+- **BWIPUAR-1616**: Access360 - Account detail - Groups tab -> The message "Account does not have groups" is incorrect (it's just due to a bad initialisation of the listbox).
+- **BWIPUAR-1620**: A description is missing for this report "Managed shares access rights analysis"
+- **BWIPUAR-1621**: "Managed Resources" tab (My 360Â° Access) does not contain managed safes resources
+- **BWIPUAR-1626**: RM: Global Roles Management - "People in Role" empty after new timeslot
+- **BWIPUAR-1634**: For Safes search, there is no possibility to search by tag
+- **BWIPUAR-1638**: Change Brainwave to Radiant Logic in IAP
+- **BWIPUAR-1644**: PAM activate controls and metadata and fill the expression with the related license and config variable
+- **BWIPUAR-1646**: [REVIEW] New REACT Reviewer Interface for Application Rights
+- **BWIPUAR-1648**: [REVIEW] New REACT Reviewer Interface for Repository Accounts
+- **BWIPUAR-1649**: [REVIEW] New REACT Reviewer Interface for CyberArk Safe Permissions
+- **BWIPUAR-1650**: [REVIEW] Update UAR documentation with new Access360 and Review interfaces
+- **BWIPUAR-1652**: [REVIEW] Orphaned Accounts selection does'nt work when "Grouped by Identity"
+- **BWIPUAR-1653**: [REVIEW] Missing column in reviewer table "Service Account"
+- **BWIPUAR-1654**: [REVIEW] Display bug of the progress bar when one of the "approve" or "revoke" kpi is null
+- **BWIPUAR-1656**: Re-enable links in Accounts Review Management page
+- **BWIPUAR-1659**: [REVIEW] Update NLS in french for new review UI
+- **BWIPUAR-1663**: Sort and Filter
+- **BWIPUAR-1664**: Allow to freeze columns in the review tables
+- **BWIPUAR-1665**: [REVIEW] UI fix colors for risk score
+- **BWIPUAR-1666**: [REVIEW] missing tabs in the Identity dialog box
+- **BWIPUAR-1667**: [REVIEW] Bug in the refresh of the page and when sorted entries on status column
+- **BWIPUAR-1669**: Role Mining - activate metadata and fill the expression with the related license and config variable
+- **BWIPUAR-1670**: [REVIEW] Ability to add comment for all entries whatever their status
+- **BWIPUAR-1672**: We can't set a comment on a selected login if this one wat not yet reviewed. Nevertheless, we can do a bulk comment on several login not yet reviewed
+- **BWIPUAR-1679**: Crosstab Export XLSX does not work when there is only one column dimension
+- **BWIPUAR-1681**: Change Brainwave Logo in Reports
+- **BWIPUAR-1683**: Review page: final congratulations message is missing when all entries are reviewed
+- **BWIPUAR-1706**: Table advanced filter optimization
+- **BWIPUAR-1710**: Display the number of entries for license check
+- **BWIPUAR-1714**: The completion percentage is superior to 100%
+- **BWIPUAR-1720**: IAP 2.0 - Update the "Revision history" in the descriptions (EN & FR)
+- **BWIPUAR-1727**: When you switch in crosstab view, the horizontal scrollbar is missing
+- **BWIPUAR-1729**: Add links to resources in crosstab reviews...
+- **BWIPUAR-1731**: Patch the .gitignore file in the pipeline to comment out the line related to `js_app`
+- **BWIPUAR-1538**: `Campainid` parameter is missing in view `bwaccess360_applicationaccessrightscampaignname`

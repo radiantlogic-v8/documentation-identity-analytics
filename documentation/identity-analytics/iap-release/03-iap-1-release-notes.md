@@ -7,258 +7,250 @@ description: "Identity Analytics 1.x Release Notes"
 
 ## IAP 1.8
 
-```
-BWIPUAR-1027: Add missing labels on detail pages
-BWIPUAR-1037: Permission glossary management does not uncheck entries
-BWIPUAR-1041: Count discrepancy between "results count" and "analytics"
-BWIPUAR-1046: Review tag selection allows empty values
-BWIPUAR-1050: IAS review should use the same priorities selector as the other reviews
-BWIPUAR-1102: Dashboard servers - Not really a standard repository 
-BWIPUAR-1120: Performance of "bulk add a new tag" action
-BWIPUAR-1174: Self service pivot table analytics for a given organization
-BWIPUAR-1178: Improve application self service analytics with new measures
-BWIPUAR-1179: Add new measures in group self-service analytics 
-BWIPUAR-1180: Add new measures in identity search analytics: self service analytics
-BWIPUAR-1194: New search capabilities: Add more search pages for resource owners and more rule based search capabilities for tech or func admins
-BWIPUAR-1195: Add ability to define a specific title for a campaign instance
-BWIPUAR-1196: English translation fixes on IAP standard identity controls - Harmonization with EE "available-controls.md" file 
-BWIPUAR-1215: Remove hardcoded labels in review finalization page
-BWIPUAR-1219: Migrate timeslot pages to the new look&feel
-BWIPUAR-1220: English translation fixes on IAP standard account & group controls - Harmonization with EE "available-controls.md" file 
-BWIPUAR-1223: Organization Detail Page - Manager tab issue when a manager manages more than one organization
-BWIPUAR-1224: Add last campaign instance status column in campaigns model list
-BWIPUAR-1225: English translation fixes on IAP standard permission & quality controls - Harmonization with EE "available-controls.md" file 
-BWIPUAR-1230: English translation fixes on IAP standard remediation & review controls - Harmonization with EE "available-controls.md" file 
-BWIPUAR-1234: Align the KPIs / lists on the admin home page
-BWIPUAR-1246: Delete line from controls_xx.properties files
-BWIPUAR-1249: Organizations KPIs display in Org Details Page
-BWIPUAR-1250: Search Pages: in Fr display columns headers on 2 rows if needed
-BWIPUAR-1259: Update reports rpt library to 2023
-BWIPUAR-1285: Add feature for folder rights filter checkbox
-BWIPUAR-1322: Role Mining
-BWIPUAR-1323: Missing NLS entry in "access360analytics_identityshareselfservice page"
-BWIPUAR-1328: improve review KPIs display in admin page
-BWIPUAR-1333: Role Mining Global Roles management
-BWIPUAR-1336: Refine admin dashboard layout
-BWIPUAR-1337: Add an option in group details "accounts" tab to include disabled accounts
-BWIPUAR-1338: Align IAP with Curie R3 SP3
-BWIPUAR-1339: Remediation management page has a horizontal scrollbar
-BWIPUAR-1341: Warning message is truncated on remediation page
-BWIPUAR-1343: The message when an IAS review is launched is incorrect
-BWIPUAR-1346: In access review Management, compliance report tab, the filters on review status are not working
-BWIPUAR-1347: It's not possible to filter on review status in "Entries management" tab
-BWIPUAR-1348: Some typo errors in French in review pages.
-BWIPUAR-1352: Missing control code in controldiscrepancy for multiple dashboards
-BWIPUAR-1356: As an application owner I want to know which groups grant access to my application
-BWIPUAR-1357: For a given application account I want to know if the account is part of groups who are granting rights to the application
-BWIPUAR-1358: As an application owner I want to analyze the accounts/groups in my application
-BWIPUAR-1378: In crosstables, do not use the same value with distinct label for dim attributes
-BWIPUAR-1393: Reports names consistencies
-BWIPUAR-1395: Review headers improvements
-BWIPUAR-1397: Perf issue to access "bwaccess360_accessreviewmanagementdetailright"
-BWIPUAR-1401: Remediation Management Page - KPI titles are truncated
-BWIPUAR-1403: Issue with the content of the compliance report available for download after the review
-BWIPUAR-1405: Account review - Actions requested - The filter on repository is not operational.
-BWIPUAR-1427: Customize message for Servers
-BWIPUAR-1437: Folder self service analytics: missing report description
-BWIPUAR-1441: Hide Control ACC23: Theoretical rights do not handle folder rights for now
-BWIPUAR-1458: Update the Role Mining User Guide 
-BWIPUAR-1459: Review Group list and Crosstab mode: delegated entries are always filtered
-BWIPUAR-1460: Handling of reviewers leavers in the reviews
-BWIPUAR-1481: Access Review Management Page do not display review launched on purged timeslots
-BWIPUAR-559: Add Campaign Type to Decision history page
-BWIPUAR-824: Standardize # or Nb in the headers of search tables for all entities
-BWIPUAR-827: Make the filter button in iap review more user friendly
-```
+- **BWIPUAR-1027**: Add missing labels on detail pages
+- **BWIPUAR-1037**: Permission glossary management does not uncheck entries
+- **BWIPUAR-1041**: Count discrepancy between "results count" and "analytics"
+- **BWIPUAR-1046**: Review tag selection allows empty values
+- **BWIPUAR-1050**: IAS review should use the same priorities selector as the other reviews
+- **BWIPUAR-1102**: Dashboard servers - Not really a standard repository
+- **BWIPUAR-1120**: Performance of "bulk add a new tag" action
+- **BWIPUAR-1174**: Self service pivot table analytics for a given organization
+- **BWIPUAR-1178**: Improve application self service analytics with new measures
+- **BWIPUAR-1179**: Add new measures in group self-service analytics
+- **BWIPUAR-1180**: Add new measures in identity search analytics: self service analytics
+- **BWIPUAR-1194**: New search capabilities: Add more search pages for resource owners and more rule based search capabilities for tech or func admins
+- **BWIPUAR-1195**: Add ability to define a specific title for a campaign instance
+- **BWIPUAR-1196**: English translation fixes on IAP standard identity controls - Harmonization with EE "available-controls.md" file
+- **BWIPUAR-1215**: Remove hardcoded labels in review finalization page
+- **BWIPUAR-1219**: Migrate timeslot pages to the new look&feel
+- **BWIPUAR-1220**: English translation fixes on IAP standard account & group controls - Harmonization with EE "available-controls.md" file
+- **BWIPUAR-1223**: Organization Detail Page - Manager tab issue when a manager manages more than one organization
+- **BWIPUAR-1224**: Add last campaign instance status column in campaigns model list
+- **BWIPUAR-1225**: English translation fixes on IAP standard permission & quality controls - Harmonization with EE "available-controls.md" file
+- **BWIPUAR-1230**: English translation fixes on IAP standard remediation & review controls - Harmonization with EE "available-controls.md" file
+- **BWIPUAR-1234**: Align the KPIs / lists on the admin home page
+- **BWIPUAR-1246**: Delete line from `controls_xx.properties` files
+- **BWIPUAR-1249**: Organizations KPIs display in Org Details Page
+- **BWIPUAR-1250**: Search Pages: in Fr display columns headers on 2 rows if needed
+- **BWIPUAR-1259**: Update reports rpt library to 2023
+- **BWIPUAR-1285**: Add feature for folder rights filter checkbox
+- **BWIPUAR-1322**: Role Mining
+- **BWIPUAR-1323**: Missing NLS entry in `access360analytics_identityshareselfservice` page
+- **BWIPUAR-1328**: improve review KPIs display in admin page
+- **BWIPUAR-1333**: Role Mining Global Roles management
+- **BWIPUAR-1336**: Refine admin dashboard layout
+- **BWIPUAR-1337**: Add an option in group details "accounts" tab to include disabled accounts
+- **BWIPUAR-1338**: Align IAP with Curie R3 SP3
+- **BWIPUAR-1339**: Remediation management page has a horizontal scrollbar
+- **BWIPUAR-1341**: Warning message is truncated on remediation page
+- **BWIPUAR-1343**: The message when an IAS review is launched is incorrect
+- **BWIPUAR-1346**: In access review Management, compliance report tab, the filters on review status are not working
+- **BWIPUAR-1347**: It's not possible to filter on review status in "Entries management" tab
+- **BWIPUAR-1348**: Some typo errors in French in review pages.
+- **BWIPUAR-1352**: Missing control code in controldiscrepancy for multiple dashboards
+- **BWIPUAR-1356**: As an application owner I want to know which groups grant access to my application
+- **BWIPUAR-1357**: For a given application account I want to know if the account is part of groups who are granting rights to the application
+- **BWIPUAR-1358**: As an application owner I want to analyze the accounts/groups in my application
+- **BWIPUAR-1378**: In crosstables, do not use the same value with distinct label for dim attributes
+- **BWIPUAR-1393**: Reports names consistencies
+- **BWIPUAR-1395**: Review headers improvements
+- **BWIPUAR-1397**: Perf issue to access `bwaccess360_accessreviewmanagementdetailright`
+- **BWIPUAR-1401**: Remediation Management Page - KPI titles are truncated
+- **BWIPUAR-1403**: Issue with the content of the compliance report available for download after the review
+- **BWIPUAR-1405**: Account review - Actions requested - The filter on repository is not operational.
+- **BWIPUAR-1427**: Customize message for Servers
+- **BWIPUAR-1437**: Folder self service analytics: missing report description
+- **BWIPUAR-1441**: Hide Control ACC23: Theoretical rights do not handle folder rights for now
+- **BWIPUAR-1458**: Update the Role Mining User Guide
+- **BWIPUAR-1459**: Review Group list and Crosstab mode: delegated entries are always filtered
+- **BWIPUAR-1460**: Handling of reviewers leavers in the reviews
+- **BWIPUAR-1481**: Access Review Management Page do not display review launched on purged timeslots
+- **BWIPUAR-559**: Add Campaign Type to Decision history page
+- **BWIPUAR-824**: Standardize # or Nb in the headers of search tables for all entities
+- **BWIPUAR-827**: Make the filter button in iap review more user friendly
 
 ## IAP 1.7
 
-```
-BWIPUAR-1013: Delegation menu available from Access360
-BWIPUAR-1026: GROUP01 Control should take into account group hierarchy
-BWIPUAR-1035: Orphaned Accounts Reconciliation Management title is misleading
-BWIPUAR-1036: The reconciliation page should show the rule's displayname
-BWIPUAR-1040: Increase the size of the 'origin' tabs
-BWIPUAR-1042: HR Controls dashboard: wrong language in staff control
-BWIPUAR-1048: It's possible to launch an IAP review without selection
-BWIPUAR-1049: IAP review: the warning on the review size is not updated
-BWIPUAR-1069: Documentation 'integration_guide" - IAP controls -  inconsistencies
-BWIPUAR-1071: Add new project mashup dashboards & extend resource owners capabilities to access their own dashboard and data
-BWIPUAR-1072: Improve reconciliation management analytics
-BWIPUAR-1075: Add new controls to detect people with several accounts on the same systems
-BWIPUAR-1076: As a brainwave developer I want an easier way to query for the LATEST review status of a given account/access right
-BWIPUAR-1077: Sorting on the "reconciliation rule" column does not seem to work.
-BWIPUAR-1079: Typo error in all "reconciliation.page" files
-BWIPUAR-1080: Problem of navigation in the "bulk personal" action when you cancel the identity selection dailog box
-BWIPUAR-1082: In the list of leavers, filter "SETUP" of the selection.
-BWIPUAR-1083: The title of the dialog box does not match the action selected for 'bulk technical"
-BWIPUAR-1084: Regression - refreshPendingRecon no longer exists
-BWIPUAR-1086: Perf issues on recon management page
-BWIPUAR-1088: HR Controls dashboard - The organisation filter is not working
-BWIPUAR-1090: Dashboard Application control - User accounts reactivated - The rule is incorrect. It would be more like "being in discrepency of controls which name is ACC27"
-BWIPUAR-1093: Portaluar_linemanagers returns all types of managers
-BWIPUAR-1097: Missing translation key "import.error_author" in "com.brainwave.isaudit.database.mashup.nls.MashupNLS"
-BWIPUAR-1098: Update documentation for new roles and perimeters
-BWIPUAR-1099: Update documentation with new controls
-BWIPUAR-1100: Inconsistency between search pages and controls regarding active identities
-BWIPUAR-1103: Typo in My Team HR Controls Dashboard
-BWIPUAR-1107: Control browser - The "Clear" action does not take into account the "Show control with discrepancies only" selection.
-BWIPUAR-1108: Control browser - Information is truncated on the "Info" right section. Mainly for Name and description of control
-BWIPUAR-1109: Control browser - When sorting the "Discrepancies" column, the "0" values are not ordered correctly.
-BWIPUAR-1111: Control Browser - NLS for "All discrepancies"
-BWIPUAR-1112: Control browser - Status of remediation set to "null" when no remediation is done
-BWIPUAR-1113: What is behind the "Share" flag?
-BWIPUAR-1114: Control Browser - The multiple remediation request from the deviation list does not work properly.
-BWIPUAR-1116: HR Controls Dashboard - HR16-19 control names
-BWIPUAR-1119: Control Browser - Filter identities on jobs - List populate with only "Account Coordinator" job
-BWIPUAR-1122: Control Browser - Delete the checkboxes for entities for which there is no remediation possible.
-BWIPUAR-1124: Control Browser - The number of discrepancies is truncated.
-BWIPUAR-1128: Admin home page - The link to "browse my analytics" should should be directly on "Analytics" tab of the My 360 Access page
-BWIPUAR-1129: The new "Account / rights review compliance status" pages are not nationalized
-BWIPUAR-1130: Add new account controls for data quality and operational efficiency
-BWIPUAR-1131: Update IAP controls to add scope wherever necessary.
-BWIPUAR-1132: "Manage Controls Execution" (In admin/system) is probably no longer useful.
-BWIPUAR-1133: Add i18n for controls HR16 to HR21
-BWIPUAR-1136: Add documentation for Controls Browser
-BWIPUAR-1137: Control Browser - .Since the scope was added to all controls, the list of control types contains several occurrences of the same type.
-BWIPUAR-1138: Control Browser - Missing icons on some control types
-BWIPUAR-1139: Hide the filter on control type; change the filter on entity for Folder / Share
-BWIPUAR-1140: Add rights remediation in analyze tab - UI actionable
-BWIPUAR-1141: Take into account the control type Right (without the S), to display the rights in the dialog
-BWIPUAR-1142: Ledger content - null values for "Local servers accounts" and "Local servers groups"
-BWIPUAR-1145: Change French Control Browser menu title
-BWIPUAR-1146: Controls Browsers remediation status
-BWIPUAR-1147: Scope tag (etiquette portée) is not nationalized
-BWIPUAR-1148: Default size for control code column might be reduced?
-BWIPUAR-1149: Analysis tab in controls browser detail display issues
-BWIPUAR-1151: ACC23 - Change French displayname
-BWIPUAR-1152: Control type = "Not available" when you select "Folder" in filters
-BWIPUAR-1155: Should we hide the SOD Controls Menu?
-BWIPUAR-1157: Entity nationalization issue
-BWIPUAR-1158: Some control Details dialogs need some time to open
-BWIPUAR-1159: Rights controls detail
-BWIPUAR-1160: Hide Theoretical Rights Controls in control browser
-BWIPUAR-1161: Add ability to launch post migration workflow to get previous campaigns metadata
-BWIPUAR-1162: Quality Controls still use permissionInfo and ApplicationInfo tables
-BWIPUAR-1173: As an auditor I want to be able to connect to brainwave to browse IAP campaigns and remediation
-BWIPUAR-1176: 2 accounts tab in bwf_permissionDetailsDialog
-BWIPUAR-1177: Tooltip to be disabled in bwf_permissionDetailsDialog controls tab
-BWIPUAR-1181: Typo - Discrepancies instead of discrepancies
-BWIPUAR-1182: Add missing controls QA15, QA16
-BWIPUAR-1183: Add missing controls GROUP26 and GROUP27
-BWIPUAR-1184: Account details ACL dialog box is empty
-BWIPUAR-1186: Missing localization for new controls
-BWIPUAR-1187: Add links and filtering options in review and remediation status dashboards and update to new look&feel
-BWIPUAR-1188: Upgrade SOD Dashboard to new look&feel
-BWIPUAR-1192: In Remediation Management page, we have two different status "New" and "new" for the remediation
-BWIPUAR-1193: Update Identity Analytics description files (EN/FR) for 1.7 improvements
-BWIPUAR-1199: Controls browser does not open the correct dialog for shares
-BWIPUAR-1200: The 'Type' field for Shared folders show 'null' on the search page
-BWIPUAR-1204: When clicking on "Refine perimeter", the selection of applications or repositories is lost (Except the first selection)
-BWIPUAR-1208: SOD controls menu issues
-BWIPUAR-1211: An error is generated in the console when trying to launch a remediation from the Control Browser on an account that is already being remediated.
-BWIPUAR-1213: Updated reviewed object from the controls browser: status in the CB is not updated
-BWIPUAR-1216: Disable controls browser remediation buttons for clients without iasreview feature?
-BWIPUAR-1222: Double click on an account in bw_control_browser_controls_details_on_acc opens (behind!) the account detail page
-BWIPUAR-1226: Fix dummy metadata creation
-BWIPUAR-1229: Replace the "cancel" button with a "close" button in CB details dialogs
-BWIPUAR-1232: Error while executing a control in CB
-BWIPUAR-1236: Performance issue when reviewing application access rights
-BWIPUAR-1237: Perf: In access360, disable PAM views with a featurepredicate because some views are executed unnecessarily for IAP.
-BWIPUAR-1242: Administrator home page metrics can display 'Null' instead of '-' under certain conditions
-BWIPUAR-1243: Sod license featureset issue
-BWIPUAR-1245: KPI in administrator homepage can display Nan
-BWIPUAR-640: Add an accounts without organization manager control, for review scopes
-BWIPUAR-649: Integrate the controls browser (new) to IAP
-BWIPUAR-767: Control ACC17 - Overallocated rights - Rule definition to be improved
-BWIPUAR-770: Control ACC23 - Overallocated folder rights - Consider not only granted Permissions
-BWIPUAR-910: Multiple selection of accounts for reconciliation
-BWIPUAR-939: Tab Identity/Access/Shares - the message is confusing
-```
+- **BWIPUAR-1013**: Delegation menu available from Access360
+- **BWIPUAR-1026**: GROUP01 Control should take into account group hierarchy
+- **BWIPUAR-1035**: Orphaned Accounts Reconciliation Management title is misleading
+- **BWIPUAR-1036**: The reconciliation page should show the rule's displayname
+- **BWIPUAR-1040**: Increase the size of the 'origin' tabs
+- **BWIPUAR-1042**: HR Controls dashboard: wrong language in staff control
+- **BWIPUAR-1048**: It's possible to launch an IAP review without selection
+- **BWIPUAR-1049**: IAP review: the warning on the review size is not updated
+- **BWIPUAR-1069**: Documentation '`integration_guide`" - IAP controls - inconsistencies
+- **BWIPUAR-1071**: Add new project mashup dashboards & extend resource owners capabilities to access their own dashboard and data
+- **BWIPUAR-1072**: Improve reconciliation management analytics
+- **BWIPUAR-1075**: Add new controls to detect people with several accounts on the same systems
+- **BWIPUAR-1076**: As a brainwave developer I want an easier way to query for the LATEST review status of a given account/access right
+- **BWIPUAR-1077**: Sorting on the "reconciliation rule" column does not seem to work.
+- **BWIPUAR-1079**: Typo error in all "reconciliation.page" files
+- **BWIPUAR-1080**: Problem of navigation in the "bulk personal" action when you cancel the identity selection dailog box
+- **BWIPUAR-1082**: In the list of leavers, filter "SETUP" of the selection.
+- **BWIPUAR-1083**: The title of the dialog box does not match the action selected for 'bulk technical"
+- **BWIPUAR-1084**: Regression - refreshPendingRecon no longer exists
+- **BWIPUAR-1086**: Perf issues on recon management page
+- **BWIPUAR-1088**: HR Controls dashboard - The organisation filter is not working
+- **BWIPUAR-1090**: Dashboard Application control - User accounts reactivated - The rule is incorrect. It would be more like "being in discrepancy of controls which name is ACC27"
+- **BWIPUAR-1093**: `Portaluar_linemanagers` returns all types of managers
+- **BWIPUAR-1097**: Missing translation key `import.error_author` in `com.brainwave.isaudit.database.mashup.nls.MashupNLS`
+- **BWIPUAR-1098**: Update documentation for new roles and perimeters
+- **BWIPUAR-1099**: Update documentation with new controls
+- **BWIPUAR-1100**: Inconsistency between search pages and controls regarding active identities
+- **BWIPUAR-1103**: Typo in My Team HR Controls Dashboard
+- **BWIPUAR-1107**: Control browser - The "Clear" action does not take into account the "Show control with discrepancies only" selection.
+- **BWIPUAR-1108**: Control browser - Information is truncated on the "Info" right section. Mainly for Name and description of control
+- **BWIPUAR-1109**: Control browser - When sorting the "Discrepancies" column, the "0" values are not ordered correctly.
+- **BWIPUAR-1111**: Control Browser - NLS for "All discrepancies"
+- **BWIPUAR-1112**: Control browser - Status of remediation set to "null" when no remediation is done
+- **BWIPUAR-1113**: What is behind the "Share" flag?
+- **BWIPUAR-1114**: Control Browser - The multiple remediation request from the deviation list does not work properly.
+- **BWIPUAR-1116**: HR Controls Dashboard - HR16-19 control names
+- **BWIPUAR-1119**: Control Browser - Filter identities on jobs - List populate with only "Account Coordinator" job
+- **BWIPUAR-1122**: Control Browser - Delete the checkboxes for entities for which there is no remediation possible.
+- **BWIPUAR-1124**: Control Browser - The number of discrepancies is truncated.
+- **BWIPUAR-1128**: Admin home page - The link to "browse my analytics" should should be directly on "Analytics" tab of the My 360 Access page
+- **BWIPUAR-1129**: The new "Account / rights review compliance status" pages are not nationalized
+- **BWIPUAR-1130**: Add new account controls for data quality and operational efficiency
+- **BWIPUAR-1131**: Update IAP controls to add scope wherever necessary.
+- **BWIPUAR-1132**: "Manage Controls Execution" (In admin/system) is probably no longer useful.
+- **BWIPUAR-1133**: Add i18n for controls HR16 to HR21
+- **BWIPUAR-1136**: Add documentation for Controls Browser
+- **BWIPUAR-1137**: Control Browser - .Since the scope was added to all controls, the list of control types contains several occurrences of the same type.
+- **BWIPUAR-1138**: Control Browser - Missing icons on some control types
+- **BWIPUAR-1139**: Hide the filter on control type; change the filter on entity for Folder / Share
+- **BWIPUAR-1140**: Add rights remediation in analyze tab - UI actionable
+- **BWIPUAR-1141**: Take into account the control type Right (without the S), to display the rights in the dialog
+- **BWIPUAR-1142**: Ledger content - null values for "Local servers accounts" and "Local servers groups"
+- **BWIPUAR-1145**: Change French Control Browser menu title
+- **BWIPUAR-1146**: Controls Browsers remediation status
+- **BWIPUAR-1147**: Scope tag (etiquette portée) is not nationalized
+- **BWIPUAR-1148**: Default size for control code column might be reduced?
+- **BWIPUAR-1149**: Analysis tab in controls browser detail display issues
+- **BWIPUAR-1151**: ACC23 - Change French displayname
+- **BWIPUAR-1152**: Control type = "Not available" when you select "Folder" in filters
+- **BWIPUAR-1155**: Should we hide the SOD Controls Menu?
+- **BWIPUAR-1157**: Entity nationalization issue
+- **BWIPUAR-1158**: Some control Details dialogs need some time to open
+- **BWIPUAR-1159**: Rights controls detail
+- **BWIPUAR-1160**: Hide Theoretical Rights Controls in control browser
+- **BWIPUAR-1161**: Add ability to launch post migration workflow to get previous campaigns metadata
+- **BWIPUAR-1162**: Quality Controls still use permissionInfo and ApplicationInfo tables
+- **BWIPUAR-1173**: As an auditor I want to be able to connect to brainwave to browse IAP campaigns and remediation
+- **BWIPUAR-1176**: 2 accounts tab in `bwf_permissionDetailsDialog`
+- **BWIPUAR-1177**: Tooltip to be disabled in `bwf_permissionDetailsDialog` controls tab
+- **BWIPUAR-1181**: Typo - Discrepancies instead of discrepancies
+- **BWIPUAR-1182**: Add missing controls QA15, QA16
+- **BWIPUAR-1183**: Add missing controls GROUP26 and GROUP27
+- **BWIPUAR-1184**: Account details ACL dialog box is empty
+- **BWIPUAR-1186**: Missing localization for new controls
+- **BWIPUAR-1187**: Add links and filtering options in review and remediation status dashboards and update to new look&feel
+- **BWIPUAR-1188**: Upgrade SOD Dashboard to new look&feel
+- **BWIPUAR-1192**: In Remediation Management page, we have two different status "New" and "new" for the remediation
+- **BWIPUAR-1193**: Update Identity Analytics description files (EN/FR) for 1.7 improvements
+- **BWIPUAR-1199**: Controls browser does not open the correct dialog for shares
+- **BWIPUAR-1200**: The 'Type' field for Shared folders show 'null' on the search page
+- **BWIPUAR-1204**: When clicking on "Refine perimeter", the selection of applications or repositories is lost (Except the first selection)
+- **BWIPUAR-1208**: SOD controls menu issues
+- **BWIPUAR-1211**: An error is generated in the console when trying to launch a remediation from the Control Browser on an account that is already being remediated.
+- **BWIPUAR-1213**: Updated reviewed object from the controls browser: status in the CB is not updated
+- **BWIPUAR-1216**: Disable controls browser remediation buttons for clients without iasreview feature?
+- **BWIPUAR-1222**: Double click on an account in `bw_control_browser_controls_details_on_acc` opens (behind!) the account detail page
+- **BWIPUAR-1226**: Fix dummy metadata creation
+- **BWIPUAR-1229**: Replace the "cancel" button with a "close" button in CB details dialogs
+- **BWIPUAR-1232**: Error while executing a control in CB
+- **BWIPUAR-1236**: Performance issue when reviewing application access rights
+- **BWIPUAR-1237**: Perf: In access360, disable PAM views with a featurepredicate because some views are executed unnecessarily for IAP.
+- **BWIPUAR-1242**: Administrator home page metrics can display 'Null' instead of '-' under certain conditions
+- **BWIPUAR-1243**: Sod license featureset issue
+- **BWIPUAR-1245**: KPI in administrator homepage can display Nan
+- **BWIPUAR-640**: Add an accounts without organization manager control, for review scopes
+- **BWIPUAR-649**: Integrate the controls browser (new) to IAP
+- **BWIPUAR-767**: Control ACC17 - Overallocated rights - Rule definition to be improved
+- **BWIPUAR-770**: Control ACC23 - Overallocated folder rights - Consider not only granted Permissions
+- **BWIPUAR-910**: Multiple selection of accounts for reconciliation
+- **BWIPUAR-939**: Tab Identity/Access/Shares - the message is confusing
 
 ## IAP 1.6
 
-```
-BWIPUAR-1065: Migrate default mashup dashboards to "project" mashup dashboards
-BWIPUAR-1062: MashupDashboard - Enhance functionaladmin and technicaladmin roles
-BWIPUAR-1059: [test automation] flagged the reviewerstrategy combo for app and repo review
-BWIPUAR-1055: Implement a test connection button for the Jira ITSM configuration page
-BWIPUAR-1054: Jira ITMS - labels are not created during the ticket creation
-BWIPUAR-1053: Jira connector, the "rejected" status is not considered as a final state of the ticket
-BWIPUAR-1047: It's not possible to select tags for IAP repository accounts review
-BWIPUAR-1030: Add  Jira Cloud as a remediation connector
-BWIPUAR-1024: Email remediation: The remediation instance is not populated
-BWIPUAR-1020: The identity picker is on the wrong timeslot when used from a campaign instance
-BWIPUAR-1015: Add a remediation strategy: send email to ITSM and RPA for automated ticket/remediation
-BWIPUAR-1014: The config parameter sndebug is mandatory even if no ITSM remediation is configured in IAP
-BWIPUAR-1010: Xtab review - its not possible to say that "I am not the reviewer"
-BWIPUAR-1009: The recorduid is declared twice in the view accessreviewcampaigns.view
-BWIPUAR-1007: Subscribed xls reports do not find xls template if Brainwave web server is installed in a Linux environment
-BWIPUAR-1004: The access360r_identity_accessrights page shows disabled accounts
-BWIPUAR-990: Access review: ask for a change (update)
-BWIPUAR-988: Protect Analytics through features
-BWIPUAR-971: Delegation - Refresh delegation table after creation/modification/deletion
-BWIPUAR-954: Application access right - Incremental review strategy - Libellé incorrect en EN
-BWIPUAR-953: French typos accents in different pages
-BWIPUAR-943: Typo in the ticket reassignment dialogue
-BWIPUAR-934: Compute discrepancies remediation for account based reviews
-BWIPUAR-932: Add a special status in IAP campaign manager for campaign in initialization status
-BWIPUAR-931: As a Brainwave designer I want to enrich my UI with actionable buttons
-BWIPUAR-930: As a reviewer I want to mark entries as not owned by "me"
-BWIPUAR-925: Control Analysis fragments can show wrong entries
-BWIPUAR-907: Identity shares & account shares inconsistencies
-BWIPUAR-906: The shareFragment family selection drop-down can show two empty entries
-BWIPUAR-862: Add a possibility to pause/resume a campaign
-BWIPUAR-852: As a review campaign owner I want to know when a campaign init is finalized
-BWIPUAR-846: When reviewing, instead of writing down a comment when i revoke an accounts/access I want to select a "standard" cause
-BWIPUAR-845: As a review manager I want to launch an account or access rights  "self review"
-BWIPUAR-837: In the review, when I self delegate an entry I want to still see its status and reassign it again if needed
-BWIPUAR-825: Multiline headers are incorrectly displayed in the table configuration (missing a space)
-BWIPUAR-763: Controls - ACC01 - Inconsistency between rule and suggested mitigation
-BWIPUAR-608: Add modification in delegation facet (localization of notifications)
-```
+- **BWIPUAR-1065**: Migrate default mashup dashboards to "project" mashup dashboards
+- **BWIPUAR-1062**: MashupDashboard - Enhance functionaladmin and technicaladmin roles
+- **BWIPUAR-1059**: [test automation] flagged the reviewerstrategy combo for app and repo review
+- **BWIPUAR-1055**: Implement a test connection button for the Jira ITSM configuration page
+- **BWIPUAR-1054**: Jira ITMS - labels are not created during the ticket creation
+- **BWIPUAR-1053**: Jira connector, the "rejected" status is not considered as a final state of the ticket
+- **BWIPUAR-1047**: It's not possible to select tags for IAP repository accounts review
+- **BWIPUAR-1030**: Add Jira Cloud as a remediation connector
+- **BWIPUAR-1024**: Email remediation: The remediation instance is not populated
+- **BWIPUAR-1020**: The identity picker is on the wrong timeslot when used from a campaign instance
+- **BWIPUAR-1015**: Add a remediation strategy: send email to ITSM and RPA for automated ticket/remediation
+- **BWIPUAR-1014**: The config parameter sndebug is mandatory even if no ITSM remediation is configured in IAP
+- **BWIPUAR-1010**: Xtab review - its not possible to say that "I am not the reviewer"
+- **BWIPUAR-1009**: The recorduid is declared twice in the view `accessreviewcampaigns.view`
+- **BWIPUAR-1007**: Subscribed xls reports do not find xls template if Brainwave web server is installed in a Linux environment
+- **BWIPUAR-1004**: The `access360r_identity_accessrights` page shows disabled accounts
+- **BWIPUAR-990**: Access review: ask for a change (update)
+- **BWIPUAR-988**: Protect Analytics through features
+- **BWIPUAR-971**: Delegation - Refresh delegation table after creation/modification/deletion
+- **BWIPUAR-954**: Application access right - Incremental review strategy - Libellé incorrect en EN
+- **BWIPUAR-953**: French typos accents in different pages
+- **BWIPUAR-943**: Typo in the ticket reassignment dialogue
+- **BWIPUAR-934**: Compute discrepancies remediation for account based reviews
+- **BWIPUAR-932**: Add a special status in IAP campaign manager for campaign in initialization status
+- **BWIPUAR-931**: As a Brainwave designer I want to enrich my UI with actionable buttons
+- **BWIPUAR-930**: As a reviewer I want to mark entries as not owned by "me"
+- **BWIPUAR-925**: Control Analysis fragments can show wrong entries
+- **BWIPUAR-907**: Identity shares & account shares inconsistencies
+- **BWIPUAR-906**: The shareFragment family selection drop-down can show two empty entries
+- **BWIPUAR-862**: Add a possibility to pause/resume a campaign
+- **BWIPUAR-852**: As a review campaign owner I want to know when a campaign init is finalized
+- **BWIPUAR-846**: When reviewing, instead of writing down a comment when i revoke an accounts/access I want to select a "standard" cause
+- **BWIPUAR-845**: As a review manager I want to launch an account or access rights "self review"
+- **BWIPUAR-837**: In the review, when I self delegate an entry I want to still see its status and reassign it again if needed
+- **BWIPUAR-825**: Multiline headers are incorrectly displayed in the table configuration (missing a space)
+- **BWIPUAR-763**: Controls - ACC01 - Inconsistency between rule and suggested mitigation
+- **BWIPUAR-608**: Add modification in delegation facet (localization of notifications)
 
 ## IAP 1.5
 
-```
-BWIPUAR-927: All review&remediation pages should be hidden if the user does not have a valid iasreview license
-BWIPUAR-926: Migrate remediation add-on to IAP 1.5
-BWIPUAR-924: The views atypicalfolders and atypicalperms present broken references
-BWIPUAR-923: bw_manualremediationreviewstatus is missing from IAP
-BWIPUAR-920: perf issue on bwaccess360_accessrightsreviewpage
-BWIPUAR-918: Some Groups controls are using old metadata bwa_repositorymetrics_nb_nbaccount
-BWIPUAR-917: Performance issue in the account detail page
-BWIPUAR-912: Controls based on views and orgbwa_orgmetrics_nbmembers_nbdirectmembers metadata
-BWIPUAR-911: Controls should use metadata instead of permission info
-BWIPUAR-908: ITSM: multiple ITSM instances are incorrectly handled
-BWIPUAR-904: Embedded remediation do not appear in the basket of technical managers
-BWIPUAR-903: Activated Timeslot & Access360 error message
-BWIPUAR-902: Dashboard feature issues
-BWIPUAR-901: Improve the "bw_controlsmanager_admin" page
-BWIPUAR-900: An error occurs in the logs when launching remediation
-BWIPUAR-898: The message "ITSM tickets will be created" is ambiguous as embedded and ITSM can be used
-BWIPUAR-897: The rights review is mislabeled 
-BWIPUAR-896: Documentation for ITSM review and status
-BWIPUAR-895: Remediation Velocity graph also includes remediation from bw_remediationreview facet
-BWIPUAR-894: The column "job/organization" is empty
-BWIPUAR-893: Filter out the hidden and technical repos in the remediation strategy management page
-BWIPUAR-892: Nationalize the remediation status
-BWIPUAR-891: Uniform date formats in the remediation revue page
-BWIPUAR-890: HR repositories cannot be selected in the repository remediation strategy
-BWIPUAR-887: The actions badge does not take into account the account status 
-BWIPUAR-886: Typo - Etes vous sur ? - in FR deletion confirmation dialogue box
-BWIPUAR-885: Identity "details" - "Decision history" tab - Decision status are not nationalized
-BWIPUAR-883: Adapt the name of the excel attached to ITSM tickets
-BWIPUAR-882: Remediation management, the "instance remediation" is not populated 
-BWIPUAR-881: Impossible to run remediation on embedded application rights 
-BWIPUAR-880: Refresh the page when changing tab in the remediation strategy 
-BWIPUAR-878: NLS - Assignment & Assignment Group not translated
-BWIPUAR-873: ACC30 should not use "leave" status
-BWIPUAR-871: Improve the control calculation times for IAP
-BWIPUAR-870: Enduser page: double clicking on a task as a delegatee sends to an unauthorized page
-BWIPUAR-866: Update icons for the "chart network" and new lines in texts
-BWIPUAR-863: Access360's My Applications tab can show duplicate entries
-BWIPUAR-851: Typo in IAP create review page "ont déja été revue"
-BWIPUAR-836: ITSM remediation
-BWIPUAR-812: View bwa_groupnbapplications is using acl join instead of direct permissions
-```
+- **BWIPUAR-927**: All review&remediation pages should be hidden if the user does not have a valid iasreview license
+- **BWIPUAR-926**: Migrate remediation add-on to IAP 1.5
+- **BWIPUAR-924**: The views atypicalfolders and atypicalperms present broken references
+- **BWIPUAR-923**: `bw_manualremediationreviewstatus` is missing from IAP
+- **BWIPUAR-920**: perf issue on `bwaccess360_accessrightsreviewpage`
+- **BWIPUAR-918**: Some Groups controls are using old metadata `bwa_repositorymetrics_nb_nbaccount`
+- **BWIPUAR-917**: Performance issue in the account detail page
+- **BWIPUAR-912**: Controls based on views and `orgbwa_orgmetrics_nbmembers_nbdirectmembers` metadata
+- **BWIPUAR-911**: Controls should use metadata instead of permission info
+- **BWIPUAR-908**: ITSM: multiple ITSM instances are incorrectly handled
+- **BWIPUAR-904**: Embedded remediation do not appear in the basket of technical managers
+- **BWIPUAR-903**: Activated Timeslot & Access360 error message
+- **BWIPUAR-902**: Dashboard feature issues
+- **BWIPUAR-901**: Improve the `bw_controlsmanager_admin` page
+- **BWIPUAR-900**: An error occurs in the logs when launching remediation
+- **BWIPUAR-898**: The message "ITSM tickets will be created" is ambiguous as embedded and ITSM can be used
+- **BWIPUAR-897**: The rights review is mislabeled
+- **BWIPUAR-896**: Documentation for ITSM review and status
+- **BWIPUAR-895**: Remediation Velocity graph also includes remediation from `bw_remediationreview` facet
+- **BWIPUAR-894**: The column "job/organization" is empty
+- **BWIPUAR-893**: Filter out the hidden and technical repos in the remediation strategy management page
+- **BWIPUAR-892**: Nationalize the remediation status
+- **BWIPUAR-891**: Uniform date formats in the remediation revue page
+- **BWIPUAR-890**: HR repositories cannot be selected in the repository remediation strategy
+- **BWIPUAR-887**: The actions badge does not take into account the account status
+- **BWIPUAR-886**: Typo - Etes vous sur ? - in FR deletion confirmation dialogue box
+- **BWIPUAR-885**: Identity "details" - "Decision history" tab - Decision status are not nationalized
+- **BWIPUAR-883**: Adapt the name of the excel attached to ITSM tickets
+- **BWIPUAR-882**: Remediation management, the "instance remediation" is not populated
+- **BWIPUAR-881**: Impossible to run remediation on embedded application rights
+- **BWIPUAR-880**: Refresh the page when changing tab in the remediation strategy
+- **BWIPUAR-878**: NLS - Assignment & Assignment Group not translated
+- **BWIPUAR-873**: ACC30 should not use "leave" status
+- **BWIPUAR-871**: Improve the control calculation times for IAP
+- **BWIPUAR-870**: Enduser page: double clicking on a task as a delegatee sends to an unauthorized page
+- **BWIPUAR-866**: Update icons for the "chart network" and new lines in texts
+- **BWIPUAR-863**: Access360's My Applications tab can show duplicate entries
+- **BWIPUAR-851**: Typo in IAP create review page "ont déja été revue"
+- **BWIPUAR-836**: ITSM remediation
+- **BWIPUAR-812**: View `bwa_groupnbapplications` is using acl join instead of direct permissions
