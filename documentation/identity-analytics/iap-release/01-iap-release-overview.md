@@ -9,19 +9,15 @@ description : "Identity Analytics Release Notes"
 
 IAP leverages improvements applied to the IGRC product. Please refer to the following table for more information :
 
-|                | IAP 1.0 | IAP 1.1 | IAP 1.2 | IAP 1.3 -- 1.7 | IAP 1.8 | IAP 2.0 |
-| :------------- | :-----: | :-----: | :-----: | :------------: | :-----: | :-----: |
-| Braille R1     |  **X**  |    -    |    -    |       -        |    -    |    -    |
-| Braille R1 SP1 |  **X**  |  **X**  |    -    |       -        |    -    |    -    |
-| Braille R1 SP2 |  **X**  |  **X**  |    -    |       -        |    -    |    -    |
-| Braille R1 SP3 |  **X**  |  **X**  |    -    |       -        |    -    |    -    |
-| Curie R1       |  **X**  |  **X**  |  **X**  |       -        |    -    |    -    |
-| Curie R2       |    -    |    -    |    -    |     **X**      |    -    |    -    |
-| Curie R2 SP1   |    -    |    -    |    -    |     **X**      |    -    |    -    |
-| Curie R3       |    -    |    -    |    -    |     **X**      |    -    |    -    |
-| Curie R3 SP4   |    -    |    -    |    -    |       -        |  **X**  |    -    |
-| Descartes R1   |    -    |    -    |    -    |       -        |  **X**  |    -    |
-| Descartes R2   |    -    |    -    |    -    |       -        |  **X**  |  **X**  |
+|              | IAP 1.0 -- 1.2 | IAP 1.3 -- 1.7 | IAP 1.8 | IAP 2.0 - 2.1 |
+| :----------- | :------------: | :------------: | :-----: | :-----------: |
+| Curie R1     |     **X**      |       -        |    -    |       -       |
+| Curie R2     |       -        |     **X**      |    -    |       -       |
+| Curie R2 SP1 |       -        |     **X**      |    -    |       -       |
+| Curie R3     |       -        |     **X**      |    -    |       -       |
+| Curie R3 SP4 |       -        |       -        |  **X**  |       -       |
+| Descartes R1 |       -        |       -        |  **X**  |       -       |
+| Descartes R2 |       -        |       -        |  **X**  |     **X**     |
 
 ## IAP release content
 
@@ -29,6 +25,21 @@ For a full list of changes to IAP please refer the to following release notes:
 
 - [IAP 2.x release notes](02-iap-2-release-notes.md "IAP release notes" )
 - [IAP 1.x release notes](03-iap-1-release-notes.md "IAP release notes" )
+
+### Version 2.1
+
+Improvement of the "web based" user access review:
+
+- Add of a new group membership review,
+- For the Application Rights Review only, addition of explicit validation by the reviewer with the "sign-off" action,
+- Once entries have been signed off by the reviewer, they can be switched to "Remediation Pending" status automatically or manually (action "proceed now" by the review campaign owner), even if the review campaign has not been finalized,
+- The automatic status change is carried out by a batch run daily, and is configured in the technical configuration (activation and delay in days).
+
+New group glossary management dashboard available from repository analytics reports to mass update group description and group sensitivity level.
+
+Ability to hide Role Mining and PAM Booster dashboards and menuitems if there are not required by updating the technical configuration of the project.
+
+Improvement of the risk ranking.
 
 ### Version 2.0
 
