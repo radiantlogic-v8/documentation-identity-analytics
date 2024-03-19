@@ -9,15 +9,15 @@ description : "Identity Analytics Release Notes"
 
 IAP leverages improvements applied to the IGRC product. Please refer to the following table for more information :
 
-|              | IAP 1.0 -- 1.2 | IAP 1.3 -- 1.7 | IAP 1.8 | IAP 2.0 - 2.2 |
-| :----------- | :------------: | :------------: | :-----: | :-----------: |
-| Curie R1     |     **X**      |       -        |    -    |       -       |
-| Curie R2     |       -        |     **X**      |    -    |       -       |
-| Curie R2 SP1 |       -        |     **X**      |    -    |       -       |
-| Curie R3     |       -        |     **X**      |    -    |       -       |
-| Curie R3 SP4 |       -        |       -        |  **X**  |       -       |
-| Descartes R1 |       -        |       -        |  **X**  |       -       |
-| Descartes R2 |       -        |       -        |  **X**  |     **X**     |
+|              | IAP 1.0 -- 1.2 | IAP 1.3 | IAP 1.4 -- 1.7 | IAP 1.8 | IAP 2.0 - 2.2 |
+| :----------- | :------------: | :-----: | :------------: | :-----: | :-----------: |
+| Curie R1     |     **X**      |    -    |       -        |    -    |       -       |
+| Curie R2     |       -        |  **X**  |       -        |    -    |       -       |
+| Curie R2 SP2 |       -        |  **X**  |       -        |    -    |       -       |
+| Curie R3     |       -        |    -    |     **X**      |    -    |       -       |
+| Curie R3 SP4 |       -        |    -    |       -        |  **X**  |       -       |
+| Descartes R1 |       -        |    -    |       -        |  **X**  |       -       |
+| Descartes R2 |       -        |    -    |       -        |  **X**  |     **X**     |
 
 ## IAP release content
 
