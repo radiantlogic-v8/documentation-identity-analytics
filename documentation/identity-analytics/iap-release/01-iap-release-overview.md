@@ -9,8 +9,8 @@ description: "Identity Analytics Release Notes"
 
 We actively support only the two most recent versions of Identity Analytics. Currently, they are:
 
-- Version 3.6
 - Version 3.7
+- Version 3.8
 
 ## IAP/IGRC Compatibility matrix
 

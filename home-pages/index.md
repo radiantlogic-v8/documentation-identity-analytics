@@ -21,16 +21,16 @@ Browse below to learn more about the capabilities and components that comprise I
 
 <section>
 
-> [Portal](/ia/iap-3.7/identity-analytics/enduser-guide/01-introduction)  
+> [Portal](/ia/iap-3.8/identity-analytics/enduser-guide/01-introduction)  
 > This section describes the basic principles of IAP (Identity Analytics Platform) interfaces and dashboards.
 
-> [Best Practices](/ia/iap-3.7/identity-analytics/integration-guide/01-introduction)
+> [Best Practices](/ia/iap-3.8/identity-analytics/integration-guide/01-introduction)
 > This section describes the best practices to follow to fulfill the data & to configure the roles.
 
-> [User Access Reviews](/ia/iap-3.7/identity-analytics/uar-guide/01-introduction)
+> [User Access Reviews](/ia/iap-3.8/identity-analytics/uar-guide/01-introduction)
 > This section describes the basic principles of self-service compliance driven User Access Review as well as the best practices to configure reviews and manage remediations.
 
-> [Release Notes](/ia/iap-3.7/identity-analytics/iap-release/01-iap-release-overview)
+> [Release Notes](/ia/iap-3.8/identity-analytics/iap-release/01-iap-release-overview)
 > This section provides information on the different releases of IAP, including the compatibility matrix and the release notes for each version.
 
 </section>
@@ -39,7 +39,7 @@ Browse below to learn more about the capabilities and components that comprise I
 
 <section>
 
-> [Controls Browser](/ia/iap-3.7/controls-browser/controls-browser)  
+> [Controls Browser](/ia/iap-3.8/controls-browser/controls-browser)  
 > Controls Browser provides administrators with an overview of the configured controls and associated defects to understand current risk.
 
 </section>
