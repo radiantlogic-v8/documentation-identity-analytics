@@ -16,13 +16,6 @@ Those roles are summarized here:
 
 ![](./media/image21.png)
 
-Several roles are available to control what end users can do in IAP.  
-These roles are summarized below:
-
-![./media/image20.png](./media/image20.png)
-
-![./media/image21.png](./media/image21.png)
-
 ## user
 
 This is the basic role that a user **must** have to access IAP.  
