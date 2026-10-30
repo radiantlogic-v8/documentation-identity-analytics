@@ -42,6 +42,9 @@ Browse below to learn more about the capabilities and components that comprise I
 > [Controls Browser](/ia/iap-3.8/controls-browser/controls-browser)  
 > Controls Browser provides administrators with an overview of the configured controls and associated defects to understand current risk.
 
+> [Office 365](/ia/iap-3.8/office-365/01-introduction)
+> Office 365 describes the search and detail pages, ACL grids, controls, dashboards and integration of SharePoint Online, Exchange Online and OneDrive. This module is optional: it only concerns the projects that load these data.
+
 </section>
 
 </tabpanel>
