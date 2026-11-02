@@ -285,3 +285,5 @@ When a campaign reaches its start date, the revision instance will be launched o
 #### Purging Behavior
 
 When an "attached to timeslot" review campaign is active and linked to a specific timeslot, that timeslot cannot be purged. Purging will only be allowed once all reviews associated with the timeslot have been finalized or deleted.
+
+If the tickets purge is enabled in the technical configuration ('Disable tickets purge' unchecked), finalized review instances older than the keep period are purged with their timeslot: their history, details page and compliance report are no longer available from the portal. Download the compliance reports you need to keep before the purge.
