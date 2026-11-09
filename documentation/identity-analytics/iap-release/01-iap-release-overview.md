@@ -28,23 +28,25 @@ IAP leverages improvements applied to the IGRC product. Please refer to the foll
 
 ### Descartes Version
 
-| Version                | IAP 1.8 - 2.2 | IAP 3.0 - 3.1 | IAP 3.2 | IAP 3.3 | IAP 3.4 - 3.5 | IAP 3.6 - IPA 3.7 |
-| :--------------------- | :-----------: | :-----------: | :-----: | :-----: | :-----------: | :---------------: |
-| Descartes R2           |     **X**     |       -       |    -    |    -    |       -       |         -         |
-| Descartes R4           |     **X**     |     **X**     |    -    |    -    |       -       |         -         |
-| Descartes R5           |     **X**     |     **X**     |    -    |    -    |       -       |         -         |
-| Descartes R5 SP3       |     **X**     |     **X**     |  **X**  |    -    |       -       |         -         |
-| Descartes R5 SP6       |     **X**     |     **X**     |  **X**  |  **X**  |       -       |         -         |
-| Descartes R5 SP7 - SP9 |     **X**     |     **X**     |  **X**  |  **X**  |     **X**     |         -         |
-| Descartes R6 SP0 - SP2 |     **X**     |     **X**     |  **X**  |  **X**  |     **X**     |       **X**       |
+| Version                | IAP 1.8 - 2.2 | IAP 3.0 - 3.1 | IAP 3.2 | IAP 3.3 | IAP 3.4 - 3.5 | IAP 3.6 - IAP 3.7 | IAP 3.8 |
+| :--------------------- | :-----------: | :-----------: | :-----: | :-----: | :-----------: | :---------------: | :-----: |
+| Descartes R2           |     **X**     |       -       |    -    |    -    |       -       |         -         |    -    |
+| Descartes R4           |     **X**     |     **X**     |    -    |    -    |       -       |         -         |    -    |
+| Descartes R5           |     **X**     |     **X**     |    -    |    -    |       -       |         -         |    -    |
+| Descartes R5 SP3       |     **X**     |     **X**     |  **X**  |    -    |       -       |         -         |    -    |
+| Descartes R5 SP6       |     **X**     |     **X**     |  **X**  |  **X**  |       -       |         -         |    -    |
+| Descartes R5 SP7 - SP9 |     **X**     |     **X**     |  **X**  |  **X**  |     **X**     |         -         |    -    |
+| Descartes R6 SP0 - SP2 |     **X**     |     **X**     |  **X**  |  **X**  |     **X**     |       **X**       |    -    |
+| Descartes R7           |       -       |       -       |    -    |    -    |       -       |         -         |  **X**  |
 
 ### Eiffel Version
 
-| Version        | IAP 3.0 - 3.5 | IAP 3.6 - IAP 3.7 |
-| :------------- | :-----------: | :---------------: |
-| Eiffel R1      |     **X**     |         -         |
-| Eiffel R2      |     **X**     |         -         |
-| Eiffel R2 SP2+ |     **X**     |       **X**       |
+| Version        | IAP 3.0 - 3.5 | IAP 3.6 - IAP 3.7 | IAP 3.8 |
+| :------------- | :-----------: | :---------------: | :-----: |
+| Eiffel R1      |     **X**     |         -         |    -    |
+| Eiffel R2      |     **X**     |         -         |    -    |
+| Eiffel R2 SP2+ |     **X**     |       **X**       |    -    |
+| Eiffel R3      |       -       |         -         |  **X**  |
 
 ## IAP release content
 
@@ -53,6 +55,12 @@ For a full list of changes to IAP please refer the to following release notes:
 - [IAP 3.x release notes](04-iap-3.X-release-notes.md "IAP release notes")
 - [IAP 2.x release notes](03-iap-2.X-release-notes.md "IAP release notes")
 - [IAP 1.x release notes](02-iap-1.X-release-notes.md "IAP release notes")
+
+### Version 3.8
+
+- New platform: Eclipse, Java 21 and Tomcat 11 (requires Descartes R7 / Eiffel R3)
+- FIPS 140-3 compliant images by default (Self-Managed / SaaS)
+- New Role Mining page, with role review by AIDA
 
 ### Version 3.7
 
