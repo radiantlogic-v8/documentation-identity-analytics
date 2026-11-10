@@ -1486,7 +1486,7 @@ Note that the Booster for PAM and Booster for AD functions, now integrated into 
 
 ## ad booster controls
 
-By installing the AD Booster add-on available on our Marketplace: [bw_ad_schema](https://marketplace.radiantlogic.com/package/bw_ad_schema/), you can extract information about privilege access rights in AD (DIT ACL) and benefit from additional controls on the accounts that can administer AD itself. These controls are listed in this section.
+By installing the AD Booster add-on `bw_ad_schema`, available on the [Radiant Logic support site](https://files.radiantlogic.com/receive/?packageCode=IX0qTSRyilShjhpxusLWpUDzzb4rduq2tO9F81NhEt4) (Home > Customer Downloads > Facets > bw_ad_schema), you can extract information about privilege access rights in AD (DIT ACL) and benefit from additional controls on the accounts that can administer AD itself. These controls are listed in this section.
 
 ---
 

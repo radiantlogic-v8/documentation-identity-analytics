@@ -228,12 +228,15 @@ For customers under maintenance/subscription contract as well as official partne
 
 <tabpanel>
   
-# Identity Analytics Data Extractor Marketplace
+# Identity Analytics Facets
 
  <section>
 
-> [Data Extractor Marketplace](https://marketplace.radiantlogic.com/)
-> Browse all available Identity Analytics Extractors by visiting the Marketplace.
+> [Radiant Logic support site](https://files.radiantlogic.com/receive/?packageCode=IX0qTSRyilShjhpxusLWpUDzzb4rduq2tO9F81NhEt4)
+> The Marketplace has been replaced: the Identity Analytics facets have been migrated to the Radiant Logic support site (SendSafely). Once logged in, you can access them by navigating to Home > Customer Downloads > Facets.
+
+> [Missing facet?](https://support.radiantlogic.com/)
+> If you need a facet that isn't available there, open a ticket on the Radiant Logic support website.
 
  </section>
  
