@@ -15,7 +15,7 @@ The Office 365 search and detail pages require the **Booster for Data Governance
 
 ### Data loading
 
-The data of the three sources (SharePoint Online, Exchange Online and OneDrive) **MUST** be loaded through the `bw_office_365` collection facet, available on the Radiant Logic marketplace.
+The data of the three sources (SharePoint Online, Exchange Online and OneDrive) **MUST** be loaded through the `bw_office_365` collection facet, available on the [Radiant Logic support site](https://files.radiantlogic.com/receive/?packageCode=IX0qTSRyilShjhpxusLWpUDzzb4rduq2tO9F81NhEt4) (Home > Customer Downloads > Facets > bw_office_365).
 
 The Office 365 pages, controls and metadata rely on the following conventions of the data loaded by this facet. Data loaded differently **MUST** follow them:
 

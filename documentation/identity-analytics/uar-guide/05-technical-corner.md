@@ -26,7 +26,7 @@ To extract server data for Identity Analytics (IDA) Server Reviews, you can comb
   
 ### Server Data Extraction  
 
-For windows accounts, you can use the IDA Extraction Scripts available in the add-on [bw_winlocalresources](http://marketplace.radiantlogic.com/package/bw_winlocalresources/) that you can download from the RadiantLogic Marketplace to extract data.
+For windows accounts, you can use the IDA Extraction Scripts available in the add-on `bw_winlocalresources` that you can download from the [Radiant Logic support site](https://files.radiantlogic.com/receive/?packageCode=IX0qTSRyilShjhpxusLWpUDzzb4rduq2tO9F81NhEt4) (Home > Customer Downloads > Facets > bw_winlocalresources) to extract data.
 
 For that you can execute locally the script on the windows servers using teledistribution tools:  
 
@@ -69,7 +69,7 @@ To extract server data for Identity Analytics (IDA) Server Reviews, you can comb
 
 **For Windows Servers:**
 
-Utilize the Identity Analytics Extraction Scripts available in the "bw_windows_local" add-on, which can be downloaded from the RadiantLogic Marketplace. The primary script, `bw_data_collector.ps1`, is designed to extract data from Active Directory and local servers. The extracted data is saved in CSV format, suitable for uploading into your Identity Analytics instance.
+Utilize the Identity Analytics data collector `bw_data_collector.ps1`, delivered in the `bw_data_collector.zip` package available in the Gitea of your Identity Analytics environment. It runs the extraction scripts (Active Directory, local servers and shares...) to extract data from Active Directory and local servers. The extracted data is saved in CSV format, suitable for uploading into your Identity Analytics instance.
 
 **For Other Servers:**
 

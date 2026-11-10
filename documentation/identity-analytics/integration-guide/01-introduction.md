@@ -60,7 +60,7 @@ Easy to extend through Tags
 
 ## Setup
 
-IAP is delivered as a dedicated add-on, available on the [marketplace](https://marketplace.radiantlogic.com/package/bw_ias/).
+IAP is delivered as a dedicated add-on (`bw_ias`), available on the [Radiant Logic support site](https://files.radiantlogic.com/receive/?packageCode=IX0qTSRyilShjhpxusLWpUDzzb4rduq2tO9F81NhEt4). Once logged in, you can access it by navigating to Home > Customer Downloads > Facets > IAP.
 
 You **MUST** download IAP prior to creating a new project. Once IAP is downloaded launch RadiantOne Identity Analytics and click on "new project", you will be able to select your IAP file add-on on the new Project Dialog Box.
 

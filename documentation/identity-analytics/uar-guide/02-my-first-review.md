@@ -16,7 +16,7 @@ Five types of review can be configured:
 - Server access rights review, to review all access rights in the selected servers,
 - Safe permissions review, to review all access rights in the selected CyberArk PAM Safes if you have enabled PAM Booster.
 
-> For Server review, the Server access rights need to be uploaded in the identity ledger as permissions and servers as application of type server. You can use for windows servers the add-on extracting windows local accounts and groups bw_winlocalresources available in the RadiantLogic Marketplace. This add-on collect and map the extracted data as well in the Identity Analytics: [bw_winlocalresources](http://marketplace.radiantlogic.com/package/bw_winlocalresources/)
+> For Server review, the Server access rights need to be uploaded in the identity ledger as permissions and servers as application of type server. You can use for windows servers the add-on extracting windows local accounts and groups bw_winlocalresources available on the [Radiant Logic support site](https://files.radiantlogic.com/receive/?packageCode=IX0qTSRyilShjhpxusLWpUDzzb4rduq2tO9F81NhEt4) (Home > Customer Downloads > Facets > bw_winlocalresources). This add-on collect and map the extracted data as well in the Identity Analytics.
 
 In this chapter, we will configure and launch an application access rights review. The repository accounts review, group membership review and server review use the same principles, and a dedicated documentation is also available for the PAM Booster designed for CyberArk.
 
