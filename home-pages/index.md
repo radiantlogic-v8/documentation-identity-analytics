@@ -233,10 +233,10 @@ For customers under maintenance/subscription contract as well as official partne
  <section>
 
 > [Radiant Logic support site](https://files.radiantlogic.com/receive/?packageCode=IX0qTSRyilShjhpxusLWpUDzzb4rduq2tO9F81NhEt4)
-> The Marketplace has been replaced: the Identity Analytics facets have been migrated to the Radiant Logic support site (SendSafely). Once logged in, you can access them by navigating to Home > Customer Downloads > Facets.
+> The Identity Analytics facets have been migrated to the Radiant Logic support site. Once logged in, you can access them by navigating to Home > Customer Downloads > Facets.
 
-> [Missing facet?](https://support.radiantlogic.com/)
-> If you need a facet that isn't available there, open a ticket on the Radiant Logic support website.
+> [Missing a facet?](https://support.radiantlogic.com/)
+> If you need a facet that isn't available there, create a ticket on the Radiant Logic support website.
 
  </section>
  
