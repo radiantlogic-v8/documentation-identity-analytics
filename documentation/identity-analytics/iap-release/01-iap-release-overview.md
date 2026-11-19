@@ -37,7 +37,7 @@ IAP leverages improvements applied to the IGRC product. Please refer to the foll
 | Descartes R5 SP6       |     **X**     |     **X**     |  **X**  |  **X**  |       -       |         -         |    -    |
 | Descartes R5 SP7 - SP9 |     **X**     |     **X**     |  **X**  |  **X**  |     **X**     |         -         |    -    |
 | Descartes R6 SP0 - SP2 |     **X**     |     **X**     |  **X**  |  **X**  |     **X**     |       **X**       |    -    |
-| Descartes R7           |       -       |       -       |    -    |    -    |       -       |         -         |  **X**  |
+| Descartes R7           |     **X**     |     **X**     |  **X**  |  **X**  |     **X**     |       **X**       |  **X**  |
 
 ### Eiffel Version
 
@@ -46,7 +46,7 @@ IAP leverages improvements applied to the IGRC product. Please refer to the foll
 | Eiffel R1      |     **X**     |         -         |    -    |
 | Eiffel R2      |     **X**     |         -         |    -    |
 | Eiffel R2 SP2+ |     **X**     |       **X**       |    -    |
-| Eiffel R3      |       -       |         -         |  **X**  |
+| Eiffel R3      |     **X**     |       **X**       |  **X**  |
 
 ## IAP release content
 
