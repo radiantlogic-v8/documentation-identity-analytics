@@ -370,6 +370,7 @@ In this page, you can:
 - Declare RadiantOne IDDM automated remediation
 - Assign a remediation strategy for each individual repository
 - Assign a remediation strategy for each individual application
+- Assign a remediation strategy for each individual share (unstructured data)
 
 #### Declaring a new third party ITSM or RPA
 
@@ -456,6 +457,7 @@ You can assign a remediation strategy for each individual repository and applica
 
 - Repository remediation strategies will be used for accounts related reviews
 - Application remediation strategies will be used for access rights related reviews  
+- Share remediation strategies, set in the **Unstructured Data** tab, will be used for unstructured data access rights reviews
 
 By default, if no remediation strategy is assigned, an *embedded* remediation strategy will be used.
 
