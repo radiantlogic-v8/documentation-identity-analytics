@@ -475,3 +475,187 @@ Once the Role Permissions review is launched, it becomes available to assigned r
 Reviewers can approve, revoke, or comment on entries individually, or perform bulk operations by selecting multiple entries at once (see [this section](./02-my-first-review.md#step-8---reviewing-entries) for more details).
 
 ![Role Permissions Reviewer Page](./media/identity_analytics_review_role_content_reviewer_page.png)
+
+## Unstructured data access rights review
+
+_Unstructured data_ is data that does not fit predefined tables or standard formats. In an identity and access management context, it means access to **folders**: file shares, SharePoint sites, OneDrive, Exchange mailboxes and similar repositories. In this review, each entry is a pair made of an **account** and a **folder** (with its share), along with the right the account holds on that folder (Read, Write, Modify, Full Control, and so on).
+
+Use this review to answer, for every shared folder in scope: _who has access, with what right, and is this access still justified?_
+
+### Prerequisites
+
+- The **Identity Analytics Services** add-on in version **3.7** or later, downloadable from the [RadiantOne Marketplace](https://marketplace.radiantlogic.com/package/bw_ias/). Version 3.7 requires Descartes R6 or later.
+- The project license must include the `unstructureddata` keyword.
+- Unstructured data must be loaded in the ledger with the latest version of the matching facet. Install the facet, configure the collect, and then run an execution plan.
+
+| Source | Facet |
+| --- | --- |
+| Windows shared folders (NTFS, CIFS) | Included in [Identity Analytics Services](https://marketplace.radiantlogic.com/package/bw_ias/); the ACL extraction script comes with the `bw_win_sharedfolders` facet |
+| Microsoft SharePoint (on premises) | [Microsoft SharePoint – data extraction and collect](https://marketplace.radiantlogic.com/package/bw_sharepoint/) |
+| Microsoft 365: SharePoint Online, OneDrive, Exchange Online | [Office 365 – data extraction and collect](https://marketplace.radiantlogic.com/package/bw_office_365/) |
+| NFSv4 | [Unix NFSv4 accounts and access rights](https://marketplace.radiantlogic.com/package/bw_nfs4_sharedfolder/) |
+| Google Drive | [Google Drive – data extraction and collect](https://marketplace.radiantlogic.com/package/bw_extractorgoogledrive/) |
+| Documentum | [Documentum – data collect](https://marketplace.radiantlogic.com/package/bw_documentum/) |
+
+Each facet ships its own PDF documentation in the project's `library/contribs/` folder.
+
+> **Note** Only shares whose application type is `Filesystem` or `Sharepoint` are offered in the review perimeter. This is set by the rule `bwiasr2ud_applications` (`rules/bw_iasreview2/unstructuredData/applications.rule`). If your collect loads shares with another application type, such as `OneDrive`, either load them with one of these types or add the type to the rule.
+
+> **Note** Each share is loaded as an application. Its `applicationfamily` attribute (for example `SharedFolders`, `OneDrive`, `SharePointOnline` or `ExchangeOnline`) is what classifies the share type. It is shown in the **Family** column of the review perimeter and is available to the folder right mapping script.
+
+### Creating the campaign
+
+Open **Review** > **Review Campaign Management**, click **+ Create** and select **Unstructured Data Review**:
+
+![Unstructured Data Review in the Create menu](./media/unstruct_data_review_create_menu.png)
+
+The wizard has the same six steps as the other reviews. Only the steps that differ are described below.
+
+#### Review Perimeter
+
+Select the **resources** (shares or file systems) to review, one by one or with **Selection by Tag**. Selecting a resource includes all of its folders in the review.
+
+![Review Perimeter step](./media/unstruct_data_review_perimeter_step.png)
+
+For each resource, the table shows its **Sensitivity Level**, **Tags**, **Family**, and the number of **Accounts**, **Identities** and **Folders** concerned. The `...` menu can also show the **Code**, **Sensitivity Reason**, **Description** and **Type** columns.
+
+Only direct rights are reviewed. Rights a folder inherits from a parent folder are not part of the perimeter.
+
+Expand **Advanced Options** to narrow the perimeter:
+
+- **Consider only folders with sensitivity level in**: keep only folders with the selected sensitivity levels:
+
+  ![Folder sensitivity levels](./media/unstruct_data_review_sensitivity_levels.png)
+
+- **Consider only folders that have one of the following tags**: keep only tagged folders.
+- **Use a custom rule to refine the perimeter**: apply a rule built in the Studio. The rule must belong to the `Perimeter` family and be part of the deployed execution plan.
+
+#### Review Strategy
+
+Pick the **Default Reviewer** (the campaign creator by default), then one of the predefined reviewer strategies:
+
+- User Accounts by Line Manager, Technical Accounts by Resource Owner, Other Accounts by Default Reviewer
+- User Accounts by Line Manager, Technical Accounts by Technical Account Owner, Other Accounts by Default Reviewer
+- User Accounts by Line Manager, All Other Accounts by Resource Owner
+- User Accounts by themselves, Other Accounts by Resource Owner
+- All Accounts by Resource Owner if any, by Default Reviewer otherwise
+- All Accounts by Default Reviewer
+- All Accounts by Permission Owner if any, by Default Reviewer otherwise
+
+The **resource owner** is the share owner whose expertise domain is `Reviewer`. If no such owner exists, the share's `Business Owner` is used. The **permission owner** is the owner of the folder. When no valid reviewer is found (no owner, no line manager, or no email address), the entry goes to the default reviewer.
+
+##### Decision history
+
+In **AI Options**, **Decision History** can be activated to reuse earlier decisions. An entry reviewed in a previous campaign within the last 90 days, and unchanged since, starts with that decision. Click **Configure Decision History** to change the number of days or to hide these entries from reviewers. See [Decision History](./03-key-concepts.md#decision-history).
+
+![Configure Decision History](./media/unstruct_data_review_decision_history.png)
+
+##### Advanced reviewer policy
+
+Select **Advanced** and click **Edit Reviewer Policy** to choose the reviewer by executing JavaScript content, as for the [other reviews](#sensitive-permissions-by-permission-owners-all-other-permissions-by-line-manager-or-application-owner). Reviewer policy templates can be saved from the **Reviewer Policies** tab of the Review Campaign Management page.
+
+For this review, the script must return one or more of the following values, separated by commas: `linemanager`, `shareowner`, `accountowner`, `folderowner`, `default`, `myself`, or an HR code. The first valid reviewer is used.
+
+The following variables are available, in addition to the account, identity, line manager and default reviewer variables already listed for the other reviews:
+
+| Object | Variables |
+| --- | --- |
+| Share | `shareuid`, `sharecode`, `shareowneruid`, `shareownerhrcode`, `shareownerfullname`, `shareownermail`, `sharecustom1` to `sharecustom3` |
+| Folder | `folderuid`, `foldercode`, `foldersensitivitylevel`, `folderowneruid`, `folderownerhrcode`, `folderownerfullname`, `folderownermail`, `foldercustom1` to `foldercustom3` |
+| Account, repository, identity | `accountcustom1` to `accountcustom3`, `repositorycustom1` to `repositorycustom3`, `identitycustom1` to `identitycustom3` |
+
+> **Note** When you click **OK**, the script is checked, and that check reports the share and folder variables (for example `foldersensitivitylevel` or `shareowneruid`) as not defined, even though they are set when the script runs. Test them with `typeof` first, as in the example above. A folder without a sensitivity level gives `null`.
+
+##### Custom folder right mapping
+
+Folder rights are collected as technical ACL codes, such as `RGFE` or `RWXGAFEMDL`. The **Custom Folder Right Mapping** script turns each code into a readable label. The raw code is shown in the **Permission Right Action** column, and the label in the **Custom Display Name** column.
+
+The script is a server-side JavaScript expression that returns the label. The following variables are available:
+
+| Variable | Content |
+| --- | --- |
+| `folderrightaction` | The ACL code of the right |
+| `applicationfamily` | The family of the share, such as `SharedFolders`, `OneDrive` or `SharePointOnline` |
+| `applicationtype` | The application type of the share, such as `Filesystem` |
+
+The default script turns each ACL code into a right, then adds a suffix that depends on the share:
+
+| ACL code | Right |
+| --- | --- |
+| `RGFE` or `R` | Read |
+| `RXGFE` | Read and Execute/List Folder Content |
+| `WGAML` | Write |
+| `RWG` | Read and Write |
+| `RWXGAFEMDL` | Modify |
+| `RWXGASPFEMDL` | Full Control |
+| `WAMLDS` | Update |
+| `PO` | Control |
+| any other value | Special |
+
+| Share | Suffix |
+| --- | --- |
+| Family `SharedFolders`, type `Filesystem` | (Filesystem) |
+| Family `SharedFolders`, any other type | (SharedFolders) |
+| Any other family | (Windows), or (Identity Analytics) for `R`, `WAMLDS` and `PO` |
+
+For example, `RWXGAFEMDL` on a Windows file share is shown as **Modify (Filesystem)**. A share with no family gets the (Windows) or (Identity Analytics) suffix.
+
+To adapt the mapping, click **Edit Mapping**:
+
+![Edit Custom Folder Right Mapping Script](./media/unstruct_data_review_folder_right_mapping.png)
+
+1. Optionally, pick a script to start from in **Select an existing script**: **Default**, or one already saved script. The trash icon next to a custom script deletes it.
+2. Edit the script.
+3. Type a name in **New script name** and click **Create new script**, or click **Override existing script** to update the custom script you selected. The **Default** script cannot be overwritten, so keep a copy of your custom scripts under version control.
+4. Click **Apply**. 
+
+The script will run when the campaign starts. Labels are shown in the Perimeter Preview, in the **Permission Right Action** column of the reviewer page and in the **Right (Custom)** column of the campaign's **Entries to review** tab.
+
+#### Perimeter Preview
+
+The preview lists one line per account and folder, with the reviewer, the account and identity details, the **Permission** (folder), its **Owner Code**, the raw **Permission Right Action**, the mapped **Custom Display Name**, the **Resource** (share) and the **Last Review Status**.
+
+Two complementary columns are hidden by default: **Ressource Family** and **Ressource Type**, the family and application type of the share. To show them, open the `...` menu at the top right of the table, click **Configure Columns** and select each column.
+
+![Configure Columns with the share family and type](./media/unstruct_data_review_configure_columns.png)
+
+![Perimeter Preview with the share family and type](./media/unstruct_data_review_preview_family_type.png)
+
+Use **Group by** to group the lines by **Account**, **Identity**, **Permission** or **Ressource**. The **Reviewer** list at the top left filters the lines by reviewer:
+
+![Preview grouped by account](./media/unstruct_data_review_preview_by_account.png)
+
+The **Reviewer UI**, **Campaign Schedule** and **Campaign Information** steps work as described in [My first review](./02-my-first-review.md#step-4---reviewer-ui).
+
+### Reviewing folder rights
+
+Reviewers find the campaign in **My 360° Access** > **Reviews**. Each line is one account with its right on one folder. The **Permission Right Action** column shows the label produced by the folder right mapping script, but its column filter lists the raw ACL codes:
+
+![Permission Right Action filter](./media/unstruct_data_review_right_action_filter.png)
+
+Besides **Approve**, **Revoke** and **Comment**, the `...` menu next to the actions offers **Update**, **I am not the reviewer**, **Ask team for help** and **Reset**, depending on the options set in the Reviewer UI step:
+
+![Reviewer actions](./media/unstruct_data_review_reviewer_more_actions.png)
+
+The `...` menu at the top right of the table exports the entries to CSV or XLSX, opens advanced filtering, and lets the reviewer choose the displayed columns:
+
+![Reviewer table options](./media/unstruct_data_review_reviewer_table_options.png)
+
+The campaign owner follows the campaign from **Review** > **Review Campaign Management**: select the campaign and click **Details** in the **Latest Review** panel. The **Entries to review** tab lists each entry with its reviewer, account, identity, folder path, mapped right (**Right (Custom)**), share and review status:
+
+![Entries to review tab](./media/unstruct_data_review_entries_to_review.png)
+
+The same tab supports the force bulk actions (approval, revocation, update, reset, sign-off and comment) on behalf of the reviewers:
+
+![Campaign manager bulk actions](./media/unstruct_data_review_campaign_manager_actions.png)
+
+### Remediating revoked folder rights
+
+Revoked folder rights are remediated like application rights. See [Step 10 - Finalizing the review campaign](./02-my-first-review.md#step-10---finalizing-the-review-campaign) and [Step 11 - Following up the remediation](./02-my-first-review.md#step-11---following-up-the-remediation). The following points are specific to unstructured data:
+
+- The remediation strategy is attached to each share, in **Remediation** > **Remediation Strategy Management**, **Unstructured Data** tab. See [Configuring the remediation strategy](./03-key-concepts.md#configuring-the-remediation-strategy). If no strategy is attached to a share, the embedded strategy is used.
+
+  ![Attach a remediation strategy](./media/unstruct_data_review_remediation_attach.png)
+
+- With the embedded strategy, the remediation actions are sent to the technical owners of the share, so make sure each share has one.
+- In **Remediation Management**, these remediations have the **Unstructured Data** target, and their **Resource** reads `<account> on <share> (<folder> [<ACL code>])`.
